@@ -3,6 +3,8 @@
     <style name="Base.Theme.SoulSupport" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/secondary_800</item>
+        <item name="colorOnBackground">@color/primary_500</item>
     </style>
 
     <style name="Theme.SoulSupport" parent="Base.Theme.SoulSupport" />
