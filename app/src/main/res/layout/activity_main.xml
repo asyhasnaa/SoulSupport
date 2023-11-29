@@ -30,8 +30,8 @@
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="78dp"
                     android:text="@string/hello_name"
+                    android:textSize="30sp"
                     android:textStyle="bold"
-                    android:textSize="30dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -43,8 +43,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="4dp"
-                    android:text="Selamat Datang kembali!"
-                    android:textSize="20dp"
+                    android:text="@string/tv_home_welcome"
+                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
@@ -59,9 +59,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
                 android:text="@string/title_menu"
-                android:textSize="18dp"
-                android:layout_marginStart="32dp">
+                android:textSize="18sp">
 
             </TextView>
 
@@ -80,7 +80,6 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/Menu1"
-                app:cardMaxElevation="0dp"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -90,7 +89,8 @@
                 android:layout_marginBottom="15dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="8dp">
+                app:cardElevation="8dp"
+                app:cardMaxElevation="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -103,17 +103,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/img_chat"></ImageView>
+                        android:contentDescription="@string/menu_curhat"
+                        android:src="@drawable/img_chat"
+                        tools:ignore="ImageContrastCheck" />
 
                     <TextView
-                        android:textColor="@color/secondary_900"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="@string/menu_curhat"
-                        android:textStyle="bold"
                         android:textAlignment="center"
-                        android:textSize="20dp"></TextView>
+                        android:textColor="@color/secondary_900"
+                        android:textSize="20sp"
+                        android:textStyle="bold">
+
+                    </TextView>
 
                 </LinearLayout>
 
@@ -143,17 +147,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/img_note"></ImageView>
+                        android:contentDescription="@string/menu_note"
+                        android:src="@drawable/img_note"
+                        tools:ignore="ImageContrastCheck">
+
+                    </ImageView>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="@string/menu_note"
-                        android:textStyle="bold"
                         android:textAlignment="center"
                         android:textColor="@color/secondary_900"
-                        android:textSize="20dp"></TextView>
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -180,21 +188,23 @@
                     android:layout_margin="15dp"
                     android:orientation="vertical">
 
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/img_article"></ImageView>
+                        android:src="@drawable/img_article"
+                        android:contentDescription="@string/menu_curhat" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="@string/menu_article"
-                        android:textStyle="bold"
-                        android:textColor="@color/secondary_900"
                         android:textAlignment="center"
-                        android:textSize="20dp"></TextView>
+                        android:textColor="@color/secondary_900"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -225,17 +235,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/img_meditation"></ImageView>
+                        android:contentDescription="@string/menu_meditation"
+                        android:src="@drawable/img_meditation"
+                        tools:ignore="ImageContrastCheck" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="@string/menu_meditation"
-                        android:textStyle="bold"
-                        android:textColor="@color/secondary_900"
                         android:textAlignment="center"
-                        android:textSize="20dp"></TextView>
+                        android:textColor="@color/secondary_900"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
