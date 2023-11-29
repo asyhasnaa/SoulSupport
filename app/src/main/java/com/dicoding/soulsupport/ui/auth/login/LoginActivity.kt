@@ -1,12 +1,12 @@
-package com.dicoding.soulsupport.ui.auth
+package com.dicoding.soulsupport.ui.auth.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.dicoding.soulsupport.R
 
-class WelcomeActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_welcome)
+        setContentView(R.layout.activity_login)
     }
 }

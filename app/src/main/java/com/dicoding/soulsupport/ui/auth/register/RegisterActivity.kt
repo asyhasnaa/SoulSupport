@@ -1,4 +1,4 @@
-package com.dicoding.soulsupport.ui.auth
+package com.dicoding.soulsupport.ui.auth.register
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
