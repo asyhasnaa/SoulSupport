@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">SoulSupport</string>
-    <string name="body">tempat di mana setiap kisah diterima dengan hangat, dan setiap perasaan dihargai tanpa syarat.</string>
+    <string name="desc_welcome">tempat di mana setiap kisah diterima dengan hangat, dan setiap perasaan dihargai tanpa syarat.</string>
+    <string name="desc_welcome2">Kami hadir untuk mendengarkan dan mendukung Anda. Jangan ragu untuk berbagi cerita dan pengalaman Anda.</string>
+    <string name="hello_name">Hi, Murph!</string>
+    <string name="title_menu">Mau melakukan apa hari ini?</string>
+    <string name="menu_curhat">Curhat</string>
+    <string name="menu_note">Catatan</string>
+    <string name="menu_article">Artikel</string>
+    <string name="menu_meditation">Meditasi</string>
+    <string name="title_welcome">Welcome to Soul support</string>
+    <string name="daftar">DAFTAR</string>
+    <string name="masuk">MASUK</string>
+    <string name="desc_splash">Logo SplashScreen</string>
 </resources>
