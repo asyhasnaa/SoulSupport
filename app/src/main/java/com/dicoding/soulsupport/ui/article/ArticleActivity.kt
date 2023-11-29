@@ -1,12 +1,12 @@
-package com.dicoding.soulsupport.ui.auth.meditation
+package com.dicoding.soulsupport.ui.article
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.dicoding.soulsupport.R
 
-class MeditationActivity : AppCompatActivity() {
+class ArticleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_meditation)
+        setContentView(R.layout.activity_article)
     }
 }

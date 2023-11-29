@@ -7,7 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.soulsupport.databinding.ActivitySplashBinding
-import com.dicoding.soulsupport.ui.auth.main.MainActivity
+import com.dicoding.soulsupport.ui.main.MainActivity
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {

@@ -4,6 +4,7 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorPrimary">@color/secondary_800</item>
+        <item name="android:colorBackground">@color/primary_500</item>
         <item name="colorOnBackground">@color/primary_500</item>
     </style>
 

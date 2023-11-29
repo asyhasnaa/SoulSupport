@@ -1,4 +1,4 @@
-package com.dicoding.soulsupport.ui.auth.main
+package com.dicoding.soulsupport.ui.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,10 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.databinding.ActivityMainBinding
-import com.dicoding.soulsupport.ui.auth.article.ArticleActivity
-import com.dicoding.soulsupport.ui.auth.chat.ChatActivity
-import com.dicoding.soulsupport.ui.auth.meditation.MeditationActivity
-import com.dicoding.soulsupport.ui.auth.note.NoteActivity
+import com.dicoding.soulsupport.ui.article.ArticleActivity
+import com.dicoding.soulsupport.ui.chat.ChatActivity
+import com.dicoding.soulsupport.ui.meditation.MeditationActivity
+import com.dicoding.soulsupport.ui.note.NoteActivity
 
 class MainActivity : AppCompatActivity() {
 

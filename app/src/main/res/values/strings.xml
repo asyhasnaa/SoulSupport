@@ -2,6 +2,8 @@
     <string name="app_name">SoulSupport</string>
     <string name="desc_welcome">tempat di mana setiap kisah diterima dengan hangat, dan setiap perasaan dihargai tanpa syarat.</string>
     <string name="desc_welcome2">Kami hadir untuk mendengarkan dan mendukung Anda. Jangan ragu untuk berbagi cerita dan pengalaman Anda.</string>
+
+    <string name="title_login_regis">Soul Support</string>
     <string name="hello_name">Hi, Murph!</string>
     <string name="title_menu">Mau melakukan apa hari ini?</string>
     <string name="menu_curhat">Curhat</string>
@@ -13,4 +15,11 @@
     <string name="masuk">MASUK</string>
     <string name="desc_splash">Logo SplashScreen</string>
     <string name="tv_home_welcome">Selamat Datang kembali!</string>
+    <string name="email">Email@gmail.com</string>
+    <string name="password">Password</string>
+    <string name="dont_have_account">Don’t have account?sign up</string>
+    <string name="have_account_login">Have account Login</string>
+    <string name="username">username</string>
+    <string name="nama_bot">Sarah</string>
+    <string name="back">kembali</string>
 </resources>
