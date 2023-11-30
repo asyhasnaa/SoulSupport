@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:maxHeight="250dp"
             android:padding="10dp"
-            android:text="This is a message"
+            android:text="@string/this_is_a_message"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="12sp" />
 
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:maxHeight="250dp"
             android:padding="10dp"
-            android:text="This is a message"
+            android:text="@string/this_is_a_message"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="12sp" />
 

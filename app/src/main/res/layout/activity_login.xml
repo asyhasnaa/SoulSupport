@@ -48,9 +48,7 @@
         app:endIconMode="password_toggle"
         app:startIconDrawable="@drawable/ic_lock"
         app:helperTextEnabled="true"
-        app:helperText="@string/password"
-        app:counterEnabled="true"
-        app:counterMaxLength="10">
+        app:helperText="@string/password">
 
         <com.dicoding.soulsupport.ui.costum.MyTextInput
             android:id="@+id/ed_login_password"

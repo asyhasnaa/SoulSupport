@@ -90,7 +90,7 @@
             android:minHeight="48dp"
             android:padding="10dp"
             android:background="@color/primary_50"
-            android:hint="@string/message_chat"/>
+            android:hint="@string/message"/>
 
         <ImageView
             android:id="@+id/sendButton"
