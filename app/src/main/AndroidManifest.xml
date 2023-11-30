@@ -12,18 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SoulSupport"
         tools:targetApi="31">
-
         <activity
-            android:name="com.dicoding.soulsupport.ui.meditation.MeditationActivity"
+            android:name=".ui.profile.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name="com.dicoding.soulsupport.ui.article.ArticleActivity"
+            android:name=".ui.meditation.MeditationActivity"
             android:exported="false" />
         <activity
-            android:name="com.dicoding.soulsupport.ui.note.NoteActivity"
+            android:name=".ui.article.ArticleActivity"
             android:exported="false" />
         <activity
-            android:name="com.dicoding.soulsupport.ui.chat.ChatActivity"
+            android:name=".ui.note.NoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.chat.ChatActivity"
             android:exported="false" />
         <activity
             android:name=".ui.auth.welcome.WelcomeActivity"
@@ -35,13 +37,14 @@
             android:name=".ui.auth.register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name="com.dicoding.soulsupport.ui.main.MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="false" />
         <activity
             android:name=".ui.auth.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
