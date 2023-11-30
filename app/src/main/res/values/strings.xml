@@ -22,15 +22,4 @@
     <string name="username">username</string>
     <string name="nama_bot">Sarah</string>
     <string name="back">kembali</string>
-    <string name="arrow_back">tombol back</string>
-    <string name="image_user">image user</string>
-    <string name="arrow_logout">arrow logout</string>
-    <string name="setting">Setting</string>
-    <string name="night_mode">Night Mode</string>
-    <string name="notification">Notification</string>
-    <string name="keluar">Keluar</string>
-    <string name="icon_logout">icon logout</string>
-    <string name="edit_profile">Edit Profile</string>
-    <string name="icon_notifikasi">icon notifikasi</string>
-    <string name="icon_night_mode">icon night mode</string>
 </resources>

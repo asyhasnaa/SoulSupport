@@ -3,28 +3,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="8dp">
+    android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/primary_50"
+        app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/cht_text"
+            android:id="@+id/cht_bot_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxWidth="250dp"
+            android:maxHeight="250dp"
             android:padding="10dp"
+            android:text="This is a message"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="This is a message"/>
-
+            android:textSize="12sp" />
 
     </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/secondary_300"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/cht_user_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="250dp"
+            android:padding="10dp"
+            android:text="This is a message"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="12sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

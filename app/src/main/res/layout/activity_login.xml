@@ -23,7 +23,10 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        app:startIconDrawable="@drawable/ic_email">
+        app:startIconDrawable="@drawable/ic_email"
+        app:endIconMode="clear_text"
+        app:helperTextEnabled="true"
+        app:helperText="@string/email">
 
         <com.dicoding.soulsupport.ui.costum.MyTextInput
             android:id="@+id/ed_login_email"
@@ -43,7 +46,11 @@
         android:layout_marginTop="20dp"
         android:hint="@string/password"
         app:endIconMode="password_toggle"
-        app:startIconDrawable="@drawable/ic_lock">
+        app:startIconDrawable="@drawable/ic_lock"
+        app:helperTextEnabled="true"
+        app:helperText="@string/password"
+        app:counterEnabled="true"
+        app:counterMaxLength="10">
 
         <com.dicoding.soulsupport.ui.costum.MyTextInput
             android:id="@+id/ed_login_password"

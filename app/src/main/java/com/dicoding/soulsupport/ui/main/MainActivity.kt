@@ -9,7 +9,7 @@ import com.dicoding.soulsupport.databinding.ActivityMainBinding
 import com.dicoding.soulsupport.ui.article.ArticleActivity
 import com.dicoding.soulsupport.ui.chat.ChatActivity
 import com.dicoding.soulsupport.ui.meditation.MeditationActivity
-import com.dicoding.soulsupport.ui.note.NoteActivity
+import com.dicoding.soulsupport.ui.note.note.NoteActivity
 
 class MainActivity : AppCompatActivity() {
 

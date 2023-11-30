@@ -1,9 +1,11 @@
 package com.dicoding.soulsupport.ui.auth.login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.databinding.ActivityLoginBinding
+import com.dicoding.soulsupport.ui.main.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -22,6 +24,8 @@ class LoginActivity : AppCompatActivity() {
             val email = binding.edLoginEmail.text.toString()
             val password = binding.edLoginPassword.text.toString()
 
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
             //
         }
     }
