@@ -30,8 +30,8 @@
     <style name="Theme.SoulSupport" parent="Base.Theme.SoulSupport" />
 
     <style name="nightModeSwitch" parent="Theme.AppCompat.Light">
-        <item name="colorControlActivated">@color/primary_900</item>
-        <item name="colorSwitchThumbNormal">@color/primary_700</item>
+        <item name="colorControlActivated">@color/secondary_800</item>
+        <item name="colorSwitchThumbNormal">@color/secondary_800</item>
         <item name="android:colorForeground">@color/secondary_800</item>
     </style>
 

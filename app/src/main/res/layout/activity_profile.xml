@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_500"
+    android:background="@color/primary_200"
     android:orientation="vertical"
     tools:context=".ui.profile.ProfileActivity">
 
@@ -118,7 +118,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:switchMinWidth="50dp"
-                        android:theme="@style/nightModeSwitch"
+                        android:theme="@style/notificationSwitch"
                         tools:ignore="TouchTargetSizeCheck" />
 
                 </RelativeLayout>
