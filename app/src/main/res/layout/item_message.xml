@@ -21,6 +21,7 @@
             android:maxHeight="250dp"
             android:padding="10dp"
             android:text="@string/this_is_a_message"
+            android:fontFamily="@font/poppins_regular"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="12sp" />
 
@@ -42,6 +43,7 @@
             android:maxHeight="250dp"
             android:padding="10dp"
             android:text="@string/this_is_a_message"
+            android:fontFamily="@font/poppins_regular"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="12sp" />
 

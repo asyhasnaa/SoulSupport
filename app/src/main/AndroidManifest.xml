@@ -23,7 +23,16 @@
             android:name=".ui.article.ArticleActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.article.detail.DetailArticleActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.note.note.NoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.note.add.AddNoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.note.detail.DetailNoteActivity"
             android:exported="false" />
         <activity
             android:name=".ui.chat.ChatActivity"

@@ -10,8 +10,9 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary_100"
         android:padding="10dp"
-        android:backgroundTint="@color/primary_500"
+
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +23,7 @@
                 android:id="@+id/btn_back"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:backgroundTint="@color/primary_500"
+                android:backgroundTint="@color/primary_100"
                 android:contentDescription="@string/back"
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -51,6 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/nama_bot"
+                    android:fontFamily="@font/poppins_bold"
                     android:backgroundTint="@color/primary_500"
                     android:textStyle="bold"
                     android:textSize="12sp"/>
@@ -65,8 +67,9 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/title_catatan"
+        android:fontFamily="@font/poppins_bold"
+        style="@style/TextAppearance.AppCompat.Headline"
         android:textSize="22sp"
-        android:textStyle="bold"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +94,7 @@
         android:elevation="10dp"
         android:src="@drawable/ic_create"
         android:backgroundTint="@color/secondary_50"
-        android:contentDescription="@string/fab_add"
+        android:contentDescription="@string/fab"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

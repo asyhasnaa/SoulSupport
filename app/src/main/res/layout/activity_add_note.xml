@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:backgroundTint="@color/primary_500"
+        android:backgroundTint="@color/primary_100"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +23,7 @@
                 android:id="@+id/btn_back"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:backgroundTint="@color/primary_500"
+                android:backgroundTint="@color/primary_100"
                 android:contentDescription="@string/back"
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -67,8 +67,8 @@
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="@string/title_catatan"
+        android:fontFamily="@font/poppins_semi_bold"
         android:textSize="22sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
@@ -79,7 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Mau menulis apa hari ini?"
+        android:hint="@string/add_note_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/note_detail">
@@ -97,7 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Ceritakan Hari-hari mu"
+        android:hint="@string/add_note_desc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ti_title">
@@ -115,7 +115,8 @@
         android:id="@+id/btn_simpan"
         android:layout_width="200dp"
         android:layout_height="60dp"
-        android:text="Simpan"
+        android:text="@string/btn_simpan"
+        android:fontFamily="@font/poppins_bold"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:backgroundTint="@color/primary_500"
+        android:backgroundTint="@color/primary_100"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +22,7 @@
                 android:id="@+id/btn_back"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:backgroundTint="@color/primary_500"
+                android:backgroundTint="@color/primary_100"
                 android:contentDescription="@string/back"
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -74,7 +74,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/primary_500"
         android:orientation="horizontal"
-        android:paddingHorizontal="10dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -86,11 +86,11 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:inputType="text"
-            android:elevation="@dimen/cardview_default_elevation"
+            android:elevation="10dp"
             android:minHeight="48dp"
             android:padding="10dp"
             android:background="@color/primary_50"
-            android:hint="@string/message"/>
+            android:hint="@string/message" />
 
         <ImageView
             android:id="@+id/sendButton"
