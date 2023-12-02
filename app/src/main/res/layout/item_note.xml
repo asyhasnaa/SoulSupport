@@ -30,7 +30,7 @@
             android:id="@+id/tv_cerita"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/desc_welcome"
+            android:text="@string/desc_onboarding3"
             android:fontFamily="@font/poppins_regular"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             card_view:layout_constraintStart_toStartOf="parent"

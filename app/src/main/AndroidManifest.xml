@@ -39,7 +39,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.auth.welcome.WelcomeActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ui.auth.login.LoginActivity"
             android:exported="false" />

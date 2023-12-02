@@ -47,7 +47,7 @@
             android:maxHeight="100dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
-            android:text="@string/desc_welcome2"
+            android:text="@string/desc_onboarding3"
             android:textSize="12sp"
             android:fontFamily="@font/poppins_regular"
             card_view:layout_constraintStart_toEndOf="@+id/iv_article"

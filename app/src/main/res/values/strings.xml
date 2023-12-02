@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">SoulSupport</string>
-    <string name="desc_welcome">tempat di mana setiap kisah diterima dengan hangat, dan setiap perasaan dihargai tanpa syarat.</string>
-    <string name="desc_welcome2">Kami hadir untuk mendengarkan dan mendukung Anda. Jangan ragu untuk berbagi cerita dan pengalaman Anda.</string>
+    <string name="title_onboarding1">Ruang\ntanpa batas</string>
+    <string name="desc_onboarding1">Tempat di mana setiap kisah diterima dengan hangat dan setiap perasaan dihargai tanpa syarat.</string>
+    <string name="title_onboarding2">Karena kamu\nberharga</string>
+    <string name="desc_onboarding2">Kami hadir untuk mendengarkan dan mendukung Anda. Setiap cerita adalah langkah kecil menuju keseimbangan mental yang berharga.</string>
+    <string name="title_onboarding3">Mulai melangkah\nbersama</string>
+    <string name="desc_onboarding3">Melangkah dan menjadi pilar bagi satu sama lain. Soul Support adalah tempat di mana kita saling menguatkan dan tumbuh bersama."</string>
+    <string name="btn_onboard">Masuk</string>
 
     <string name="title_login_regis">Soul Support</string>
     <string name="hello_name">Hi, Murph!</string>
@@ -54,4 +59,5 @@
     <string name="desc_login">Hai Selamat datang Kembali</string>
 
     <string name="contoh_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
 </resources>
