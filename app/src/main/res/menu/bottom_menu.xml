@@ -9,7 +9,7 @@
     <item
         android:id="@+id/bottom_note"
         android:title="Catatan"
-        android:icon="@drawable/ic_add"/>
+        android:icon="@drawable/ic_create"/>
 
     <item
         android:id="@+id/bottom_profile"

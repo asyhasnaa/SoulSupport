@@ -29,16 +29,22 @@
 
     <style name="Theme.SoulSupport" parent="Base.Theme.SoulSupport" />
 
-
+<!--    Styling Switch Night Mode-->
     <style name="nightModeSwitch" parent="Theme.AppCompat.Light">
         <item name="colorControlActivated">@color/secondary_800</item>
         <item name="colorSwitchThumbNormal">@color/secondary_800</item>
         <item name="android:colorForeground">@color/secondary_800</item>
     </style>
 
+<!--    Styling Switch Notification-->
     <style name="notificationSwitch" parent="Theme.AppCompat.Light">
         <item name="colorControlActivated">@color/secondary_800</item>
         <item name="colorSwitchThumbNormal">@color/secondary_800</item>
         <item name="android:colorForeground">@color/secondary_800</item>
+    </style>
+
+<!--    Styling Indicator Bottom Navigation-->
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/primary_500</item>
     </style>
 </resources>
