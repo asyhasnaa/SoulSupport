@@ -8,6 +8,7 @@ import androidx.cardview.widget.CardView
 import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.databinding.ActivityMainBinding
 import com.dicoding.soulsupport.ui.article.ArticleActivity
+import com.dicoding.soulsupport.ui.auth.SplashActivity
 import com.dicoding.soulsupport.ui.chat.ChatActivity
 import com.dicoding.soulsupport.ui.meditation.MeditationActivity
 import com.dicoding.soulsupport.ui.note.add.AddNoteActivity

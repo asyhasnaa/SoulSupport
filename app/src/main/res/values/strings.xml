@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SoulSupport</string>
 
-<!--    Text untuk Onboarding-->
+    <!--    Text untuk Onboarding-->
     <string name="desc_splash">Logo SplashScreen</string>
     <string name="title_onboarding1">Ruang\ntanpa batas</string>
     <string name="desc_onboarding1">Tempat di mana setiap kisah diterima dengan hangat dan setiap perasaan dihargai tanpa syarat.</string>
@@ -12,7 +12,7 @@
     <string name="btn_onboard">Masuk</string>
     <string name="tv_name">Murphy</string>
 
-<!--    Text pada halaman Menu-->
+    <!--    Text pada halaman Menu-->
     <string name="hello_name">Hi, </string>
     <string name="title_menu">Mau melakukan apa hari ini?</string>
     <string name="menu_curhat">Curhat</string>
@@ -66,5 +66,9 @@
     <string name="contoh_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
     <string name="banner_image">banner image</string>
     <string name="img_user">image user</string>
+    <string name="exd_fab">Buat Cerita</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">gallery</string>
+    <string name="upload">Upload</string>
 
 </resources>
