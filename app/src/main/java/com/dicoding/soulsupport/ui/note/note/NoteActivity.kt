@@ -5,8 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.dicoding.soulsupport.databinding.ActivityNoteBinding
 import com.dicoding.soulsupport.ui.main.MainActivity
-import com.dicoding.soulsupport.ui.note.add.AddNoteActivity
-import com.dicoding.soulsupport.ui.note.detail.DetailNoteActivity
+import com.dicoding.soulsupport.ui.note.add.AddUpdateNoteActivity
 
 class NoteActivity : AppCompatActivity() {
 
@@ -17,7 +16,7 @@ class NoteActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.extendedFab.setOnClickListener {
-            val intent = Intent(this, AddNoteActivity::class.java)
+            val intent = Intent(this, AddUpdateNoteActivity::class.java)
             startActivity(intent)
         }
 

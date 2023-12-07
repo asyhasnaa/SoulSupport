@@ -3,10 +3,8 @@ package com.dicoding.soulsupport.ui.chat
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.databinding.ActivityChatBinding
 import com.dicoding.soulsupport.ui.main.MainActivity
-import com.dicoding.soulsupport.ui.note.add.AddNoteActivity
 
 class ChatActivity : AppCompatActivity() {
 

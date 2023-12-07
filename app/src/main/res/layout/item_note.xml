@@ -11,9 +11,10 @@
     android:layout_marginEnd="30dp"
     card_view:cardCornerRadius="15dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:padding="20dp">
 
         <TextView
@@ -22,9 +23,7 @@
             android:layout_height="wrap_content"
             android:text="@string/note_title"
             android:fontFamily="@font/poppins_semi_bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
         <TextView
             android:id="@+id/tv_cerita"
@@ -32,21 +31,16 @@
             android:layout_height="wrap_content"
             android:text="@string/desc_onboarding3"
             android:fontFamily="@font/poppins_regular"
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_title" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
-        <ImageButton
-            android:id="@+id/btn_hapus"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_delete"
-            android:layout_marginTop="15dp"
-            android:contentDescription="@string/hapus_catatan"
-            card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_cerita" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_item_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end|bottom"
+            android:text="@string/date"
+            android:textSize="12sp" />
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

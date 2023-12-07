@@ -8,10 +8,9 @@ import androidx.cardview.widget.CardView
 import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.databinding.ActivityMainBinding
 import com.dicoding.soulsupport.ui.article.ArticleActivity
-import com.dicoding.soulsupport.ui.auth.SplashActivity
 import com.dicoding.soulsupport.ui.chat.ChatActivity
 import com.dicoding.soulsupport.ui.meditation.MeditationActivity
-import com.dicoding.soulsupport.ui.note.add.AddNoteActivity
+import com.dicoding.soulsupport.ui.note.add.AddUpdateNoteActivity
 import com.dicoding.soulsupport.ui.note.note.NoteActivity
 import com.dicoding.soulsupport.ui.profile.ProfileActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -37,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         bottomNavigation.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.bottom_note -> {
-                    startActivity(Intent(this@MainActivity, AddNoteActivity::class.java))
+                    startActivity(Intent(this@MainActivity, AddUpdateNoteActivity::class.java))
                 }
 
                 R.id.bottom_profile -> {
