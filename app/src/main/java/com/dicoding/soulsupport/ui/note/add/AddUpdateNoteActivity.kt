@@ -13,5 +13,6 @@ class AddUpdateNoteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAddNoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
     }
 }
