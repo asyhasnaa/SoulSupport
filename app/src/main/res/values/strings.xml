@@ -72,6 +72,8 @@
     <string name="gallery">gallery</string>
     <string name="upload">Upload</string>
     <string name="meditasi">Hai, istirahat sejenak dapat memberi pikiranmu waktu untuk me-refresh.\n Ingatlah momen-momen bahagia yang pernah kamu alami.\nTarik napas dalam - dalam dan keluarkan secara perlahan </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
     <string name="title">Judul</string>
