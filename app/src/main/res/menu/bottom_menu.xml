@@ -7,13 +7,18 @@
         android:icon="@drawable/ic_home"/>
 
     <item
+        android:id="@+id/bottom_meditate"
+        android:title="@string/meditation"
+        android:icon="@drawable/ic_meditate"/>
+
+    <item
         android:id="@+id/bottom_chat"
         android:title="Chatbot"
         android:icon="@drawable/ic_chatbot"/>
 
     <item
         android:id="@+id/bottom_note"
-        android:title="Catatan"
+        android:title="Notes"
         android:icon="@drawable/ic_create"/>
 
     <item

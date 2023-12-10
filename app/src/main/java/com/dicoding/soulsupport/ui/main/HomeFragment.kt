@@ -10,7 +10,8 @@ import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.databinding.FragmentHomeBinding
 import com.dicoding.soulsupport.ui.article.ArticleActivity
 import com.dicoding.soulsupport.ui.chat.ChatActivity
-import com.dicoding.soulsupport.ui.meditation.MeditationActivity
+import com.dicoding.soulsupport.ui.meditation.MeditationFragment
+import com.dicoding.soulsupport.ui.note.add.AddNoteActivity
 import com.dicoding.soulsupport.ui.note.note.NoteFragment
 import com.dicoding.soulsupport.ui.profile.ProfileFragment
 
@@ -43,12 +44,12 @@ class HomeFragment : Fragment() {
         }
 
         binding.Menu2.setOnClickListener {
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.frame_container, NoteFragment()).commit()
+            startActivity(Intent(requireContext(), AddNoteActivity::class.java))
         }
 
         binding.Menu3.setOnClickListener {
-            startActivity(Intent(requireContext(), MeditationActivity::class.java))
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.frame_container, MeditationFragment()).commit()
         }
 
         binding.Menu4.setOnClickListener {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.meditation.MeditationActivity">
+    tools:context=".ui.meditation.Meditation2Activity">
 
     <ImageView
         android:id="@+id/curvedImageView"
@@ -36,7 +36,7 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_marginTop="24dp"
-        android:src="@drawable/img_meditate"
+        android:src="@drawable/img_sleep"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +49,7 @@
         android:layout_marginTop="12dp"
         android:fontFamily="@font/poppins_semi_bold"
         android:gravity="center"
-        android:text="@string/tv_release_stress"
+        android:text="@string/tv_better_sleep"
         android:textColor="@color/secondary_900"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +65,7 @@
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/poppins_medium"
         android:gravity="center"
-        android:text="@string/release_stress"
+        android:text="@string/desc_betterSleep"
         android:textColor="@color/secondary_900"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"

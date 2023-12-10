@@ -6,7 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.databinding.ActivityMainBinding
-import com.dicoding.soulsupport.ui.chat.ChatActivity
+import com.dicoding.soulsupport.ui.chat.ChatFragment
+import com.dicoding.soulsupport.ui.meditation.MeditationFragment
 import com.dicoding.soulsupport.ui.note.note.NoteFragment
 import com.dicoding.soulsupport.ui.profile.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -34,8 +35,12 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(HomeFragment())
                 }
 
+                R.id.bottom_meditate -> {
+                    replaceFragment(MeditationFragment())
+                }
+
                 R.id.bottom_chat -> {
-                    startActivity(Intent(this, ChatActivity::class.java))
+                    replaceFragment(ChatFragment())
                 }
 
                 R.id.bottom_note -> {
@@ -50,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         }
         replaceFragment(HomeFragment())
     }
+
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit()
     }

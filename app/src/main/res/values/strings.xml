@@ -95,5 +95,14 @@
     <string name="added">Satu item berhasil ditambahkan</string>
     <string name="changed">Satu item berhasil diubah</string>
     <string name="deleted">Satu item berhasil dihapus</string>
+    <string name="release_stress">Now, close your eyes. Relax your shoulders.\nTake a deep breath in, hold for a moment, and exhale slowly. Release the tension with each breath. Let go of the stress weighing you down.</string>
+    <string name="tv_release_stress">Release Stress</string>
+    <string name="tv_better_sleep">Better Sleep</string>
+    <string name="desc_betterSleep">As you prepare for sleep, find a comfortable position. Inhale deeply, allowing calmness to fill your body. Exhale, letting go of the thoughts that keep you awake. Imagine a peaceful place, and let that serenity guide you into a restful sleep.</string>
+    <string name="title_meditasi">Get your soul\n space to relax</string>
+    <string name="desc_meditasi">choose your meditation focus</string>
+    <string name="desc_release_page">Istirahat sejenak dapat memberi pikiranmu waktu untuk me-refresh dan menenangkan diri</string>
+    <string name="desc_better_page">Bayangkan tempat yang damai dan biarkan itu memandumu untuk tidur nyenyak</string>
+    <string name="meditation">Meditation</string>
 
 </resources>
