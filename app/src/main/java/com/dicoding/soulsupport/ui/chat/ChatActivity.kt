@@ -19,8 +19,7 @@ class ChatActivity : AppCompatActivity() {
 
     private fun onBack() {
         binding.btnBack.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            onBackPressed()
         }
     }
 }

@@ -14,6 +14,7 @@ import com.dicoding.soulsupport.ui.meditation.MeditationFragment
 import com.dicoding.soulsupport.ui.note.add.AddNoteActivity
 import com.dicoding.soulsupport.ui.note.note.NoteFragment
 import com.dicoding.soulsupport.ui.profile.ProfileFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeFragment : Fragment() {
 
@@ -37,6 +38,8 @@ class HomeFragment : Fragment() {
         binding.ivProfile.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.frame_container, ProfileFragment()).commit()
+            val bottomNavigationView =  requireActivity().findViewById<BottomNavigationView>(R.id.bottom_navigation)
+            bottomNavigationView.menu.findItem(R.id.bottom_profile)?.isChecked = true
         }
 
         binding.Menu1.setOnClickListener {
@@ -50,6 +53,9 @@ class HomeFragment : Fragment() {
         binding.Menu3.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.frame_container, MeditationFragment()).commit()
+
+            val bottomNavigationView =requireActivity().findViewById<BottomNavigationView>(R.id.bottom_navigation)
+            bottomNavigationView.menu.findItem(R.id.bottom_meditate)?.isChecked = true
         }
 
         binding.Menu4.setOnClickListener {

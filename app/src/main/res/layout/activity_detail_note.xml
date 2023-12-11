@@ -88,17 +88,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
                 <TextView
-                    android:id="@+id/tv_item_date"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/date"
-                    android:textColor="@color/secondary_400"
-                    android:fontFamily="@font/poppins_italic"
-                    android:textSize="12sp"
-                    app:layout_constraintTop_toBottomOf="@+id/note_detail_title" />
-
-                <TextView
                     android:id="@+id/note_detail_body"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -106,6 +95,18 @@
                     android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"
                     app:layout_constraintTop_toBottomOf="@+id/tv_item_date" />
+
+                <TextView
+                    android:id="@+id/tv_item_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/date"
+                    android:layout_gravity="end"
+                    android:textColor="@color/secondary_400"
+                    android:fontFamily="@font/poppins_italic"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/note_detail_title" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

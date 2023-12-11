@@ -64,51 +64,38 @@
         android:id="@+id/item_chat"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@+id/edt_message"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/linearLayout"
+    <EditText
+        android:id="@+id/edt_message"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/secondary_300"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="15dp"
+        android:layout_gravity="center"
+        android:background="@drawable/chat_rounded"
+        android:gravity="start"
+        android:layout_marginStart="30dp"
         android:layout_marginBottom="20dp"
+        android:hint="@string/message"
+        android:inputType="text"
+        android:padding="13dp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/sendButton"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <EditText
-            android:id="@+id/edt_message"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:background="?attr/selectableItemBackground"
-            android:gravity="start"
-            android:hint="@string/message"
-            android:inputType="text"
-            android:padding="13dp"
-            android:textColor="@color/black" />
-
-
-    </androidx.cardview.widget.CardView>
 
     <ImageButton
         android:id="@+id/sendButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|center"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="20dp"
         android:backgroundTint="@color/primary_100"
         android:src="@drawable/baseline_send_24"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_message"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/edt_message"
-        tools:ignore="NotSibling" />
+        app:layout_constraintStart_toEndOf="@+id/edt_message"
+        app:layout_constraintTop_toTopOf="@+id/edt_message" />
 
     <ProgressBar
         android:id="@+id/progressBar"

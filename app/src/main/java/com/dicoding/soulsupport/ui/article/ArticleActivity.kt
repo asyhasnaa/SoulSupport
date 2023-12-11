@@ -22,7 +22,12 @@ class ArticleActivity : AppCompatActivity() {
             }
         }
 
+        onBack()
     }
 
-
+    private fun onBack() {
+        binding.btnBack.setOnClickListener {
+            onBackPressed()
+        }
+    }
 }

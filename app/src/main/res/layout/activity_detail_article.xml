@@ -43,7 +43,7 @@
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="center"
-                    android:text="Detail Artikel"
+                    android:text="@string/detail_artikel"
                     android:textColor="@color/secondary_900"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"

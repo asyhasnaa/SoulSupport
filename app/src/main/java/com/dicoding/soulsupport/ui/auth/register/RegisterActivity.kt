@@ -29,6 +29,7 @@ class RegisterActivity : AppCompatActivity() {
             val username = binding.edRegisterUsername.text.toString()
             val email = binding.edRegisterEmail.text.toString()
             val password = binding.edRegisterPassword.text.toString()
+            val age = binding.cbAge.text.toString()
 
             // test
             val intent = Intent(this, LoginActivity::class.java)
