@@ -24,6 +24,8 @@ class MeditationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupClickListeners()
+
+        onBack()
     }
 
     private fun setupClickListeners() {
@@ -34,4 +36,11 @@ class MeditationFragment : Fragment() {
             startActivity(Intent(requireContext(), Meditation2Activity::class.java))
         }
     }
+    private fun onBack() {
+        binding.btnBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
+    }
+
+
 }

@@ -4,24 +4,22 @@ import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
-import android.view.View
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.databinding.ActivityMeditation2Binding
-import com.dicoding.soulsupport.databinding.ActivityMeditationBinding
 
 class MeditationActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMeditationBinding
+    private lateinit var binding: ActivityMeditation2Binding
     private lateinit var mediaPlayer: MediaPlayer
     private lateinit var runnable: Runnable
     private var handler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMeditationBinding.inflate(layoutInflater)
+        binding = ActivityMeditation2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         mediaPlayer = MediaPlayer.create(this, R.raw.peaceful)

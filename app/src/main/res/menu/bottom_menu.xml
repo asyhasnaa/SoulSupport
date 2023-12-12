@@ -4,12 +4,11 @@
     <item
         android:id="@+id/bottom_home"
         android:title="Home"
-        android:enabled="true"
         android:icon="@drawable/ic_home"/>
 
     <item
         android:id="@+id/bottom_meditate"
-        android:title="@string/meditation"
+        android:title="@string/menu_meditation"
         android:icon="@drawable/ic_meditate"/>
 
     <item

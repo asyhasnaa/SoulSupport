@@ -26,11 +26,13 @@ class NoteAdapter(private var notes: List<Note>, context: Context) :
         val updateButton: ImageView = itemView.findViewById(R.id.iv_edit)
         val deleteButton: ImageView = itemView.findViewById(R.id.iv_delete)
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.item_note, parent, false)
         return NoteViewHolder(itemView)
     }
+
     override fun getItemCount(): Int = notes.size
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val note = notes[position]

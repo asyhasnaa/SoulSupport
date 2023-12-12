@@ -37,7 +37,7 @@ class HomeFragment : Fragment() {
     private fun setupClickListeners() {
         binding.ivProfile.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.frame_container, ProfileFragment()).commit()
+                .replace(R.id.frame_container, ProfileFragment()).addToBackStack(null).commit()
             val bottomNavigationView =  requireActivity().findViewById<BottomNavigationView>(R.id.bottom_navigation)
             bottomNavigationView.menu.findItem(R.id.bottom_profile)?.isChecked = true
         }
@@ -47,12 +47,17 @@ class HomeFragment : Fragment() {
         }
 
         binding.Menu2.setOnClickListener {
-            startActivity(Intent(requireContext(), AddNoteActivity::class.java))
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.frame_container, NoteFragment()).addToBackStack(null).commit()
+
+            val bottomNavigationView =requireActivity().findViewById<BottomNavigationView>(R.id.bottom_navigation)
+            bottomNavigationView.menu.findItem(R.id.bottom_note)?.isChecked = true
+
         }
 
         binding.Menu3.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.frame_container, MeditationFragment()).commit()
+                .replace(R.id.frame_container, MeditationFragment()).addToBackStack(null).commit()
 
             val bottomNavigationView =requireActivity().findViewById<BottomNavigationView>(R.id.bottom_navigation)
             bottomNavigationView.menu.findItem(R.id.bottom_meditate)?.isChecked = true

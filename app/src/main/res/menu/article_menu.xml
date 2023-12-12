@@ -4,7 +4,6 @@
 
     <item
         android:id="@+id/favorite"
-        android:icon="@drawable/bot_sarah"
         android:title="@string/nama_bot"
         android:contentDescription="@string/nama_bot"
         app:showAsAction="ifRoom" />

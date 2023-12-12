@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_100"
     tools:context=".ui.main.MainActivity">
 
     <FrameLayout
@@ -20,11 +19,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_menu"
-        android:background="@color/primary_50"
-        app:itemIconTint="@color/secondary_900"
-        app:itemTextColor="@color/secondary_900"
+        android:background="@color/secondary_900"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         app:itemIconSize="25sp"
         app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

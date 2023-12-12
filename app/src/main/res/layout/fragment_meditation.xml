@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_100"
     tools:context=".ui.meditation.MeditationFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/primary_100"
         android:padding="2dp"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -23,7 +21,7 @@
                 android:id="@+id/btn_back"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:backgroundTint="@color/primary_100"
+                android:backgroundTint="@color/white"
                 android:contentDescription="@string/back"
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -106,10 +104,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="18dp"
+                android:layout_marginBottom="1dp"
                 android:fontFamily="@font/poppins_semi_bold"
                 android:text="@string/tv_release_stress"
                 android:textColor="@color/primary_900"
                 android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvDesc_meditate"
                 app:layout_constraintStart_toEndOf="@id/iv_meditate"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -155,7 +155,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
 
             <ImageView
                 android:id="@+id/iv_meditate2"
@@ -180,6 +181,7 @@
                 android:text="@string/tv_better_sleep"
                 android:textColor="@color/primary_900"
                 android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvDesc_meditate2"
                 app:layout_constraintStart_toEndOf="@id/iv_meditate2"
                 app:layout_constraintTop_toTopOf="parent" />
 

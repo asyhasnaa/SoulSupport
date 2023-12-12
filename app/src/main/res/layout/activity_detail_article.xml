@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/secondary_50"
     tools:context=".ui.article.detail.DetailArticleActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,8 +14,6 @@
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="@color/primary_100"
             android:padding="2dp"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -28,7 +25,7 @@
                     android:id="@+id/btn_back"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="@color/primary_100"
+                    android:backgroundTint="@color/white"
                     android:contentDescription="@string/back"
                     android:src="@drawable/ic_arrow_back"
                     app:layout_constraintBottom_toBottomOf="parent"

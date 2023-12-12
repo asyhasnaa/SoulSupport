@@ -4,27 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".ui.auth.register.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/curvedImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/curved2_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="156dp"
+        android:background="@drawable/logo_ss"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/logo"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="40dp"
-        android:text="@string/text_register"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_bold"
+        android:text="@string/text_register"
+        android:textColor="@color/primary_900"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/ivLogo" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/poppins_regular"
         android:text="@string/register_view"
         android:textAppearance="@style/MaterialAlertDialog.Material3.Body.Text"
         android:textSize="14sp"
@@ -36,21 +64,21 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="@string/username"
         app:helperTextEnabled="true"
-        app:helperText="@string/username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:startIconDrawable="@drawable/ic_person"
         app:endIconMode="clear_text">
 
         <com.dicoding.soulsupport.ui.costum.MyTextInput
             android:id="@+id/ed_register_username"
             android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/poppins_regular"
             android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,7 +90,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         app:endIconMode="clear_text"
-        app:helperText="@string/email"
         app:helperTextEnabled="true"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
@@ -72,7 +99,8 @@
         <com.dicoding.soulsupport.ui.costum.MyTextInput
             android:id="@+id/ed_register_email"
             android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:maxLines="1" />
@@ -87,7 +115,6 @@
         android:layout_marginTop="10dp"
         android:hint="@string/password"
         app:endIconMode="password_toggle"
-        app:helperText="@string/password"
         app:helperTextEnabled="true"
         app:layout_constraintEnd_toEndOf="@+id/outlinedTextField"
         app:layout_constraintStart_toStartOf="@+id/outlinedTextField"
@@ -97,8 +124,9 @@
         <com.dicoding.soulsupport.ui.costum.MyTextInput
             android:id="@+id/ed_register_password"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:ems="10"
+            android:fontFamily="@font/poppins_regular"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -108,6 +136,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/desc_checkbox"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/secondary_900"
         app:layout_constraintStart_toStartOf="@+id/rs_in_password"
         app:layout_constraintTop_toBottomOf="@+id/rs_in_password" />
 
@@ -115,21 +145,42 @@
         android:id="@+id/btn_rs_daftar"
         android:layout_width="200dp"
         android:layout_height="60dp"
-        android:layout_marginTop="150dp"
-        android:text="@string/daftar"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/register"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rs_in_password" />
+        app:layout_constraintTop_toBottomOf="@+id/cb_age" />
 
-    <TextView
-        android:id="@+id/link_login"
+    <LinearLayout
+        android:id="@+id/linkLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/have_account_login"
-        android:textSize="12sp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/btn_rs_daftar"
         app:layout_constraintStart_toStartOf="@+id/btn_rs_daftar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_rs_daftar" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_rs_daftar">
+
+        <TextView
+            android:id="@+id/desc_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/have_account_login"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/link_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/login"
+            android:textSize="11sp" />
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
