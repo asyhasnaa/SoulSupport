@@ -11,26 +11,24 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/iconapp_test"
+        android:icon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/iconapp_test"
+        android:roundIcon="@mipmap/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.SoulSupport"
         tools:targetApi="31">
-        <activity
-            android:name=".ui.meditation.meditation3Activity"
-            android:exported="false" />
+
         <activity
             android:name=".ui.meditation.Meditation2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.camera.CameraActivity"
             android:exported="false" />
         <activity
             android:name=".ui.note.add.UpdateNoteActivity"
             android:exported="false" />
         <activity
             android:name=".ui.note.detail.DetailNoteActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.camera.CameraActivity"
             android:exported="false" />
 
         <activity
@@ -41,9 +39,6 @@
             android:exported="false" />
         <activity
             android:name=".ui.article.detail.DetailArticleActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.note.note.NoteActivity"
             android:exported="false" />
         <activity
             android:name=".ui.note.add.AddNoteActivity"

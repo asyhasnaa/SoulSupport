@@ -26,9 +26,9 @@ class ChatFragment : Fragment() {
     }
 
     private fun setupClickListeners() {
-
         binding.cardView1.setOnClickListener {
             startActivity(Intent(requireContext(), ChatActivity::class.java))
         }
     }
+
 }

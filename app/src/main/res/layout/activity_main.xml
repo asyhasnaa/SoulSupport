@@ -26,5 +26,4 @@
         app:itemIconSize="25sp"
         app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"/>
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>

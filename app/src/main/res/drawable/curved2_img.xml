@@ -1,9 +1,9 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:top="-100dp"
-        android:right="-100dp"
-        android:left="-100dp"
-        android:bottom="100dp">
+        android:top="100dp"
+        android:right="-200dp"
+        android:left="-200dp"
+        android:bottom="-100dp">
         <shape android:shape="oval">
             <solid android:color="@color/primary_300" />
         </shape>

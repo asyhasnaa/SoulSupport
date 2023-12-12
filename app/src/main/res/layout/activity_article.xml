@@ -34,10 +34,10 @@
                 style="@style/TextAppearance.AppCompat.Headline"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/poppins_medium"
                 android:gravity="center"
-                android:text="Artikel"
+                android:text="@string/menu_article"
                 android:textColor="@color/secondary_900"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +62,6 @@
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:layout_constraintStart_toStartOf="parent" />
 
-
     <com.google.android.material.search.SearchView
         style="Widget.Material3.SearchView"
         android:id="@+id/searchView"
@@ -84,12 +83,13 @@
         android:id="@+id/item_article"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="12dp"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/searchView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchBar" />
+        app:layout_constraintTop_toBottomOf="@+id/searchBar"
+        tools:listitem="@layout/item_article"/>
 
     <ProgressBar
         android:id="@+id/progressBar"

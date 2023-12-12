@@ -1,7 +1,6 @@
 package com.dicoding.soulsupport.ui.camera
 
 import android.Manifest
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -9,9 +8,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.soulsupport.databinding.ActivityCameraBinding
-import com.dicoding.soulsupport.ui.profile.ProfileFragment
 import com.dicoding.soulsupport.utils.getImageUri
 
 class CameraActivity : AppCompatActivity() {
@@ -19,6 +18,7 @@ class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding
     private var currentImageUri: Uri? = null
 
+    private val cameraViewModel: CameraViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,9 +35,8 @@ class CameraActivity : AppCompatActivity() {
             showToast("Silahkan pilih gambar terlebih dahulu")
             return
         }
-        val intent = Intent(this, ProfileFragment::class.java)
-        intent.putExtra("EXTRA_IMAGE_URI", currentImageUri.toString())
-        startActivity(intent)
+        cameraViewModel.imageUri = currentImageUri.toString()
+        finish()
     }
 
     private fun startGallery() {

@@ -22,7 +22,7 @@ class Meditation2Activity : AppCompatActivity() {
         binding = ActivityMeditation2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.peaceful)
+        mediaPlayer = MediaPlayer.create(this, R.raw.sleep)
 
         binding.seekbar.progress = 0
         binding.seekbar.max = mediaPlayer.duration

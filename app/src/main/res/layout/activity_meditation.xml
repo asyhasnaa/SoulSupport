@@ -9,14 +9,13 @@
     <ImageView
         android:id="@+id/curvedImageView"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="450dp"
         android:src="@drawable/curved_img"
         android:scaleType="fitXY"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
-
 
     <TextView
         android:id="@+id/textView4"

@@ -11,6 +11,7 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/primary_100"
         android:padding="2dp"
         app:layout_constraintTop_toTopOf="parent">
@@ -38,7 +39,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/poppins_medium"
                 android:gravity="center"
-                android:text="@string/setting"
+                android:text="@string/edit_profile"
                 android:textColor="@color/secondary_900"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -69,9 +70,7 @@
                     android:id="@+id/img_profile"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/image_user"
-                    android:src="@drawable/user" />
-
+                    android:src="@drawable/user"/>
             </androidx.cardview.widget.CardView>
             
             <TextView
@@ -92,18 +91,6 @@
                 android:text="email@gmail.com"
                 android:textColor="@color/secondary_900"
                 android:textSize="12sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/round_secondary"
-                android:paddingStart="30dp"
-                android:paddingEnd="30dp"
-                android:text="@string/edit_profile"
-                android:textColor="@color/white"
-                tools:ignore="TouchTargetSizeCheck" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -140,12 +127,13 @@
                         android:textColor="@color/secondary_900" />
 
                     <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/night_mode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:switchMinWidth="50dp"
-                        android:theme="@style/notificationSwitch"
+                        android:theme="@style/nightModeSwitch"
                         tools:ignore="TouchTargetSizeCheck" />
 
                 </RelativeLayout>
@@ -176,6 +164,7 @@
                         android:textColor="@color/secondary_900" />
 
                     <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/notif_switch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"

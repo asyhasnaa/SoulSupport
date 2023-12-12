@@ -13,26 +13,27 @@
     <string name="tv_name">Murphy</string>
 
     <!--    Text pada halaman Menu-->
-    <string name="hello_name">Hi, </string>
-    <string name="title_menu">Mau melakukan apa hari ini?</string>
-    <string name="menu_curhat">Curhat</string>
-    <string name="menu_note">Catatan</string>
-    <string name="menu_article">Artikel</string>
-    <string name="menu_meditation">Meditasi</string>
-    <string name="tv_home_welcome">Senang melihatmu kembali!</string>
+    <string name="hello_name">Hello, </string>
+    <string name="tv_home_welcome">Great to see you again!</string>
+    <string name="title_menu">What do you want to do?</string>
+    <string name="menu_chatbot">Chatbot</string>
+    <string name="menu_note">Notes</string>
+    <string name="menu_article">Article</string>
+    <string name="menu_meditation">Meditation</string>
 
     <string name="title_login_regis">Soul Support</string>
     <string name="title_welcome">Welcome to Soul support</string>
     <string name="daftar">DAFTAR</string>
     <string name="masuk">MASUK</string>
-    <string name="email">Email@gmail.com</string>
+    <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="dont_have_account">Don’t have account?sign up</string>
-    <string name="have_account_login">Have account Login</string>
+    <string name="dont_have_account">Don’t have account?</string>
+    <string name="have_account_login">Already have account?</string>
     <string name="username">username</string>
     <string name="nama_bot">Sarah</string>
     <string name="back">kembali</string>
     <string name="text_register">Create new account</string>
+    <string name="text_notes">Tell us about \n your day</string>
     <string name="umur_register">age</string>
     <string name="register_view">Let\'s Gooo…</string>
     <string name="desc_checkbox">Berusia 15 tahun keatas</string>
@@ -55,26 +56,22 @@
     <string name="message">Message....</string>
     <string name="this_is_a_message">This is a message</string>
     <string name="fab">tambah_note</string>
+    <string name="contoh_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Ut enim ad minim veniam, </string>
     <string name="item_gambar_article">Gambar article</string>
     <string name="tv_title_article">Finding Happiness</string>
     <string name="keterangan_article"><![CDATA[Baca Selengkapnya >]]></string>
-    <string name="add_note_title">Mau menulis apa hari ini?</string>
-    <string name="add_note_desc">Ceritakan Hari-hari mu</string>
-    <string name="btn_simpan">Simpan</string>
-    <string name="desc_login">Hai Selamat datang Kembali</string>
+    <string name="add_note_title">The title</string>
+    <string name="add_note_desc">Tell us about your day here</string>
+    <string name="btn_simpan">Save</string>
+    <string name="desc_login">Hello, \nNice to see you \again!</string>
     <string name="date">Date</string>
 
-    <string name="contoh_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
     <string name="banner_image">banner image</string>
     <string name="img_user">image user</string>
     <string name="exd_fab">Buat Cerita</string>
     <string name="camera">Camera</string>
     <string name="gallery">gallery</string>
     <string name="upload">Upload</string>
-    <string name="meditasi">Hai, istirahat sejenak dapat memberi pikiranmu waktu untuk me-refresh.\n Ingatlah momen-momen bahagia yang pernah kamu alami.\nTarik napas dalam - dalam dan keluarkan secara perlahan </string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
     <string name="title">Judul</string>
     <string name="description">Deskripsi</string>
@@ -95,15 +92,18 @@
     <string name="added">Satu item berhasil ditambahkan</string>
     <string name="changed">Satu item berhasil diubah</string>
     <string name="deleted">Satu item berhasil dihapus</string>
-    <string name="release_stress">Now, close your eyes. Relax your shoulders.\nTake a deep breath in, hold for a moment, and exhale slowly. Release the tension with each breath. Let go of the stress weighing you down.</string>
-    <string name="tv_release_stress">Release Stress</string>
-    <string name="tv_better_sleep">Better Sleep</string>
-    <string name="desc_betterSleep">As you prepare for sleep, find a comfortable position. Inhale deeply, allowing calmness to fill your body. Exhale, letting go of the thoughts that keep you awake. Imagine a peaceful place, and let that serenity guide you into a restful sleep.</string>
+
+    <!--    Text untuk halaman meditasi-->
     <string name="title_meditasi">Get your soul\n space to relax</string>
     <string name="desc_meditasi">choose your meditation focus</string>
+    <string name="tv_release_stress">Release Stress</string>
     <string name="desc_release_page">Istirahat sejenak dapat memberi pikiranmu waktu untuk me-refresh dan menenangkan diri</string>
+    <string name="release_stress">Now, close your eyes. Relax your shoulders. \nTake a deep breath in, hold for a moment, and exhale slowly. Release the tension with each breath. Let go of the stress weighing you down.</string>
+    <string name="tv_better_sleep">Better Sleep</string>
+    <string name="desc_betterSleep">As you prepare for sleep, find a comfortable position. Inhale deeply, allowing calmness to fill your body. Exhale, letting go of the thoughts that keep you awake. Imagine a peaceful place, and let that serenity guide you into a restful sleep.</string>
     <string name="desc_better_page">Bayangkan tempat yang damai dan biarkan itu memandumu untuk tidur nyenyak</string>
-    <string name="meditation">Meditation</string>
-    <string name="detail_artikel">Detail Artikel</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="detail_artikel">Detail Article</string>
 
 </resources>
