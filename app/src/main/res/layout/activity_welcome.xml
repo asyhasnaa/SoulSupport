@@ -15,7 +15,8 @@
         android:scaleType="fitXY"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/title_onboarding1" />
 
     <ImageView
         android:id="@+id/ivLogo"
@@ -27,7 +28,8 @@
         android:foregroundGravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/app_name" />
 
     <TextView
         android:id="@+id/Menu1"
@@ -40,24 +42,23 @@
         android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivLogo" />
+        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        tools:ignore="TextSizeCheck" />
 
     <ImageView
         android:id="@+id/ivDescWelcome1"
         android:layout_width="300dp"
-        android:layout_height="220dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="300dp"
         android:src="@drawable/onboard1"
         app:layout_constraintEnd_toEndOf="@+id/Menu1"
         app:layout_constraintLeft_toLeftOf="@id/Menu1"
-        app:layout_constraintTop_toBottomOf="@id/Menu1" />
+        app:layout_constraintTop_toBottomOf="@id/Menu1"
+        android:contentDescription="@string/title_onboarding1" />
 
     <TextView
         android:id="@+id/tvDescWelcome1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="5dp"
         android:fontFamily="@font/poppins_regular"
         android:lineSpacingMultiplier="1.2"
         android:text="@string/desc_onboarding1"
@@ -88,10 +89,11 @@
         android:layout_width="300dp"
         android:layout_height="250dp"
         android:layout_marginTop="5dp"
+        android:contentDescription="@string/title_onboarding2"
         android:src="@drawable/onboard2"
-        android:layout_marginStart="-40dp"
         app:layout_constraintLeft_toLeftOf="@id/Menu2"
-        app:layout_constraintTop_toBottomOf="@id/Menu2" />
+        app:layout_constraintTop_toBottomOf="@id/Menu2"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/tvDescWelcome2"
@@ -130,7 +132,8 @@
         android:layout_marginTop="15dp"
         android:src="@drawable/onboard3"
         app:layout_constraintLeft_toLeftOf="@id/Menu3"
-        app:layout_constraintTop_toBottomOf="@id/Menu3" />
+        app:layout_constraintTop_toBottomOf="@id/Menu3"
+        android:contentDescription="@string/title_onboarding3" />
 
     <TextView
         android:id="@+id/tvDescWelcome3"

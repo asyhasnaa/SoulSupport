@@ -23,8 +23,11 @@
             android:id="@+id/iv_article"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/img_item_article"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             android:contentDescription="@string/item_gambar_article"
+            android:src="@drawable/img_item_article"
+            card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent" />
 
@@ -32,13 +35,13 @@
             android:id="@+id/tv_title_article"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxWidth="200dp"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="10dp"
-            android:textSize="14sp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/poppins_semi_bold"
-            android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+            android:maxWidth="200dp"
             android:text="@string/tv_title_article"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+            android:textSize="14sp"
             card_view:layout_constraintStart_toEndOf="@+id/iv_article"
             card_view:layout_constraintTop_toTopOf="parent" />
 

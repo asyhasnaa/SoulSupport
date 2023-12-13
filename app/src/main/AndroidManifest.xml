@@ -25,6 +25,9 @@
             android:name=".ui.camera.CameraActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.note.note.NoteActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.note.add.UpdateNoteActivity"
             android:exported="false" />
         <activity

@@ -8,7 +8,6 @@ import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.databinding.ActivityMainBinding
 import com.dicoding.soulsupport.ui.chat.ChatFragment
 import com.dicoding.soulsupport.ui.meditation.MeditationFragment
-import com.dicoding.soulsupport.ui.note.note.NoteFragment
 import com.dicoding.soulsupport.ui.profile.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -43,10 +42,6 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(ChatFragment())
                 }
 
-                R.id.bottom_note -> {
-                    replaceFragment(NoteFragment())
-                }
-
                 R.id.bottom_profile -> {
                     replaceFragment(ProfileFragment())
                 }
@@ -62,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         val currentFragment = supportFragmentManager.findFragmentById(R.id.frame_container)
-        if (currentFragment is NoteFragment || currentFragment is ProfileFragment) {
+        if (currentFragment is ChatFragment ||currentFragment is MeditationFragment || currentFragment is ProfileFragment) {
             startActivity(Intent(this, MainActivity::class.java))
         } else {
             super.onBackPressed()

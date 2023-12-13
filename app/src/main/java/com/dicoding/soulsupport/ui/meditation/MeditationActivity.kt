@@ -8,18 +8,19 @@ import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.soulsupport.R
-import com.dicoding.soulsupport.databinding.ActivityMeditation2Binding
+import com.dicoding.soulsupport.databinding.ActivityMeditationBinding
 
+@Suppress("DEPRECATION")
 class MeditationActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMeditation2Binding
+    private lateinit var binding: ActivityMeditationBinding
     private lateinit var mediaPlayer: MediaPlayer
     private lateinit var runnable: Runnable
     private var handler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMeditation2Binding.inflate(layoutInflater)
+        binding = ActivityMeditationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         mediaPlayer = MediaPlayer.create(this, R.raw.peaceful)

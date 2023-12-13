@@ -6,11 +6,9 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.data.database.NoteDatabaseHelper
 import com.dicoding.soulsupport.databinding.ActivityDetailNoteBinding
 import com.dicoding.soulsupport.ui.note.add.UpdateNoteActivity
-import com.dicoding.soulsupport.ui.note.note.NoteFragment
 
 class DetailNoteActivity : AppCompatActivity() {
 
@@ -48,13 +46,12 @@ class DetailNoteActivity : AppCompatActivity() {
     private fun showDeleteConfirmationDialog(noteId: Int) {
         val alertDialogBuilder = AlertDialog.Builder(this)
         alertDialogBuilder.setMessage("Apakah Anda yakin ingin menghapus catatan ini?")
-        alertDialogBuilder.setPositiveButton("Ya") { dialogInterface: DialogInterface, i: Int ->
+        alertDialogBuilder.setPositiveButton("Ya") { _: DialogInterface, _: Int ->
             db.deleteNote(noteId)
             Toast.makeText(this, "Catatan berhasil dihapus", Toast.LENGTH_SHORT).show()
 
-            val fragment = NoteFragment()
-            supportFragmentManager.beginTransaction().replace(R.id.frame_container, fragment)
-                .commit()
+            // Instead of replacing with NoteFragment, you might want to go back to NoteActivity
+            finish()
         }
         alertDialogBuilder.setNegativeButton("Tidak", null)
         val alertDialog = alertDialogBuilder.create()

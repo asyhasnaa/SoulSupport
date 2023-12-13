@@ -17,11 +17,6 @@
         android:icon="@drawable/ic_chatbot"/>
 
     <item
-        android:id="@+id/bottom_note"
-        android:title="Notes"
-        android:icon="@drawable/ic_create"/>
-
-    <item
         android:id="@+id/bottom_profile"
         android:title="Profile"
         android:icon="@drawable/ic_person"/>

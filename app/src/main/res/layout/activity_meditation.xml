@@ -10,12 +10,13 @@
         android:id="@+id/curvedImageView"
         android:layout_width="match_parent"
         android:layout_height="450dp"
-        android:src="@drawable/curved_img"
         android:scaleType="fitXY"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/curved_img"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/primary_50"
+        android:contentDescription="@string/menu_meditation" />
 
     <TextView
         android:id="@+id/textView4"
@@ -35,11 +36,12 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_marginTop="24dp"
-        android:src="@drawable/img_meditate"
+        android:src="@drawable/img_stress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:contentDescription="@string/release_stress" />
 
     <TextView
         android:id="@+id/textView5"
@@ -70,7 +72,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:ignore="VisualLintLongText" />
 
     <SeekBar
         android:id="@+id/seekbar"
@@ -90,8 +93,8 @@
         android:id="@+id/wrap_fab"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:gravity="center"
         android:layout_margin="8dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,33 +106,40 @@
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:layout_margin="8dp"
-            android:backgroundTint="@color/secondary_800"
+            android:backgroundTint="@color/primary_100"
             android:clickable="true"
+            android:contentDescription="@string/release_stress"
             app:maxImageSize="40dp"
             app:shapeAppearance="@style/ShapeAppearanceOverlay.Fab.Circle"
-            app:srcCompat="@drawable/ic_pause" />
+            app:srcCompat="@drawable/ic_pause"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/play"
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:layout_margin="4dp"
-            android:backgroundTint="@color/secondary_800"
+            android:backgroundTint="@color/primary_100"
             android:clickable="true"
+            android:tint="@color/white"
             app:maxImageSize="45dp"
             app:shapeAppearance="@style/ShapeAppearanceOverlay.Fab.Circle"
-            app:srcCompat="@drawable/ic_play" />
+            app:srcCompat="@drawable/ic_play"
+            android:contentDescription="@string/release_stress" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/stop"
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:layout_margin="4dp"
-            android:backgroundTint="@color/secondary_800"
+            android:background="#FFFFFF"
+            android:backgroundTint="@color/primary_100"
             android:clickable="true"
+            android:tint="#FFFFFF"
             app:maxImageSize="40dp"
             app:shapeAppearance="@style/ShapeAppearanceOverlay.Fab.Circle"
-            app:srcCompat="@drawable/ic_stop" />
+            app:srcCompat="@drawable/ic_stop"
+            android:contentDescription="@string/release_stress" />
 
     </LinearLayout>
 

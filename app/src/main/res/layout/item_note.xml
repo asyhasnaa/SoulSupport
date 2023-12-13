@@ -85,7 +85,7 @@
             android:gravity="end|bottom"
             android:layout_marginTop="8dp"
             android:text="@string/date"
-            android:textColor="@color/secondary_400"
+            android:textColor="@color/secondary_700"
             android:fontFamily="@font/poppins_italic"
             android:textSize="12sp" />
     </LinearLayout>
