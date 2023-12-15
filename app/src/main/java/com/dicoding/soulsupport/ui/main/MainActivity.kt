@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         bottomNavigation()
-
         replaceFragment(HomeFragment())
     }
 
@@ -48,7 +47,6 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-        replaceFragment(HomeFragment())
     }
 
     private fun replaceFragment(fragment: Fragment) {
@@ -59,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         val currentFragment = supportFragmentManager.findFragmentById(R.id.frame_container)
         if (currentFragment is ChatFragment ||currentFragment is MeditationFragment || currentFragment is ProfileFragment) {
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         } else {
             super.onBackPressed()
         }

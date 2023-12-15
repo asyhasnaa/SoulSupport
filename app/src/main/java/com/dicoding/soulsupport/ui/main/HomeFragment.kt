@@ -32,6 +32,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupClickListeners()
+        onBackPressed()
     }
 
     private fun setupClickListeners() {
@@ -69,14 +70,12 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
-    override fun onResume() {
-        super.onResume()
-
+    private fun onBackPressed() {
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
-            requireActivity().finish()
+            activity?.finish()
         }
     }
+
 }
 
 
