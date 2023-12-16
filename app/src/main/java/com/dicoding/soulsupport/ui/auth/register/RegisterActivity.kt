@@ -39,7 +39,7 @@ class RegisterActivity : AppCompatActivity() {
             val password = binding.edRegisterPassword.text.toString()
             val confPassword = binding.edRegisterConfPassword.text.toString()
 
-            if (name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
+            if (name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty() && confPassword.isNotEmpty()) {
                 if (confPassword == password) {
                     viewModel.registerUser(name, email, password, confPassword)
                         .observe(this) { result ->

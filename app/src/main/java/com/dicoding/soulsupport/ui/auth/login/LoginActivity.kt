@@ -46,8 +46,6 @@ class LoginActivity : AppCompatActivity() {
                         }
                         is Result.Success -> {
                             binding.progressBar.visibility = View.GONE
-                            val contentView = findViewById<View>(R.id.content_view)
-                            Snackbar.make(contentView, "Berhasil",Snackbar.LENGTH_LONG).show()
                             val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
                             finish()

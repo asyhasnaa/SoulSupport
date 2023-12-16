@@ -38,7 +38,7 @@
             android:name=".ui.meditation.MeditationActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.article.ArticleActivity"
+            android:name=".ui.article.article.ArticleActivity"
             android:exported="false" />
         <activity
             android:name=".ui.article.detail.DetailArticleActivity"
