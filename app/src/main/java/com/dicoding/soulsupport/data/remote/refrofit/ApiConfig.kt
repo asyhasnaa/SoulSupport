@@ -2,33 +2,33 @@ package com.dicoding.soulsupport.data.remote.refrofit
 
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.HttpException
+import okhttp3.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 
-class ApiConfig {
-    companion object {
-        fun getApiService(token: String): ApiService {
-            val loggingInterceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-            val authInterceptor = Interceptor { chain ->
-                val req = chain.request()
-                val requestHeaders = req.newBuilder()
-                    .addHeader("Authorization","Bearer $token")
-                    .build()
-                chain.proceed(requestHeaders)
-            }
-            val client = OkHttpClient.Builder()
-                .addInterceptor(loggingInterceptor)
-                .addInterceptor(authInterceptor)
+
+object ApiConfig {
+    private const val BASE_URL = "https://soulsupport.et.r.appspot.com"
+    fun getApiService(): ApiService {
+        val client = OkHttpClient.Builder().apply {
+            addInterceptor(AuthInterceptor("YOUR_ACCESS_TOKEN"))
+        }.build()
+
+        val retrofit = Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(client)
+            .build()
+        return retrofit.create(ApiService::class.java)
+    }
+
+    class AuthInterceptor(private val token: String) : Interceptor {
+        override fun intercept(chain: Interceptor.Chain): Response {
+            val request = chain.request().newBuilder()
+                .addHeader("Authorization", "Bearer $token")
                 .build()
-            val retrofit = Retrofit.Builder()
-                .baseUrl("https://s.id/SoulSupportDataSet")
-                .addConverterFactory(GsonConverterFactory.create())
-                .client(client)
-                .build()
-            return retrofit.create(ApiService::class.java)
+
+            return chain.proceed(request)
         }
     }
 }

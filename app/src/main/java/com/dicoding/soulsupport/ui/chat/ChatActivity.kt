@@ -47,6 +47,7 @@ class ChatActivity : AppCompatActivity() {
     private fun onBack() {
         binding.btnBack.setOnClickListener {
             onBackPressed()
+            finish()
         }
     }
 

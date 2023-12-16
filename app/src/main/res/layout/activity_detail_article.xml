@@ -54,7 +54,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/tv_detail_article"
                 android:layout_width="370dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"

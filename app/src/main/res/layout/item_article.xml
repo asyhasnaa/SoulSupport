@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardNote"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="130dp"
     android:layout_gravity="center"
     card_view:cardElevation="10dp"
     android:layout_marginStart="30dp"
@@ -17,12 +17,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp">
+        android:padding="5dp">
 
         <ImageView
             android:id="@+id/iv_article"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:contentDescription="@string/item_gambar_article"
@@ -33,30 +33,25 @@
 
         <TextView
             android:id="@+id/tv_title_article"
-            android:layout_width="wrap_content"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="16dp"
             android:fontFamily="@font/poppins_semi_bold"
-            android:maxWidth="200dp"
             android:text="@string/tv_title_article"
-            android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
-            android:textSize="14sp"
+            android:textSize="12sp"
             card_view:layout_constraintStart_toEndOf="@+id/iv_article"
-            card_view:layout_constraintTop_toTopOf="parent" />
+            card_view:layout_constraintTop_toTopOf="@+id/iv_article" />
 
         <TextView
             android:id="@+id/tv_desc_article"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/poppins_regular"
             android:maxWidth="210dp"
             android:maxHeight="100dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
             android:text="@string/desc_onboarding3"
             android:textSize="12sp"
-            android:fontFamily="@font/poppins_regular"
-            card_view:layout_constraintStart_toEndOf="@+id/iv_article"
+            card_view:layout_constraintStart_toStartOf="@+id/tv_title_article"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_title_article" />
 
         <TextView

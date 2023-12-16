@@ -16,7 +16,7 @@
     <string name="hello_name">Hello, </string>
     <string name="tv_home_welcome">Great to see you again!</string>
     <string name="title_menu">What do you want to do?</string>
-    <string name="menu_chatbot">Chatbot</string>
+    <string name="menu_chatbot">Chat with Sarah</string>
     <string name="menu_note">Notes</string>
     <string name="menu_article">Article</string>
     <string name="menu_meditation">Meditation</string>
@@ -107,5 +107,7 @@
     <string name="register">Register</string>
     <string name="detail_artikel">Detail Article</string>
     <string name="add_note">Add Note</string>
+    <string name="profile">Profile</string>
+    <string name="confirm_password">confirm password</string>
 
 </resources>

@@ -131,15 +131,29 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <CheckBox
-        android:id="@+id/cb_age"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/rs_in_confPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="@string/desc_checkbox"
-        android:fontFamily="@font/poppins_regular"
-        android:textColor="@color/secondary_900"
+        android:layout_marginTop="5dp"
+        android:hint="@string/confirm_password"
+        app:endIconMode="password_toggle"
+        app:helperTextEnabled="true"
+        app:layout_constraintEnd_toEndOf="@+id/rs_in_password"
         app:layout_constraintStart_toStartOf="@+id/rs_in_password"
-        app:layout_constraintTop_toBottomOf="@+id/rs_in_password" />
+        app:layout_constraintTop_toBottomOf="@+id/rs_in_password"
+        app:startIconDrawable="@drawable/ic_lock">
+
+        <com.dicoding.soulsupport.ui.costum.MyTextInput
+            android:id="@+id/ed_register_confPassword"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_rs_daftar"
@@ -152,7 +166,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cb_age" />
+        app:layout_constraintTop_toBottomOf="@+id/rs_in_confPassword" />
 
     <LinearLayout
         android:id="@+id/linkLogin"

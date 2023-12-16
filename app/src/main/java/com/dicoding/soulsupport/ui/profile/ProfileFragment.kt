@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.dicoding.soulsupport.databinding.FragmentProfileBinding
 import com.dicoding.soulsupport.ui.camera.CameraActivity
@@ -32,6 +33,7 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         binding.imgProfile.setOnClickListener {
             val intent = Intent(requireContext(), CameraActivity::class.java)
             startActivityForResult(intent, CAMERA_REQUEST_CODE)
@@ -44,10 +46,8 @@ class ProfileFragment : Fragment() {
                 .load(imageUri)
                 .into(binding.imgProfile)
         }
-
         onBack()
     }
-
     private fun onBack() {
         binding.btnBack.setOnClickListener {
             requireActivity().onBackPressed()
