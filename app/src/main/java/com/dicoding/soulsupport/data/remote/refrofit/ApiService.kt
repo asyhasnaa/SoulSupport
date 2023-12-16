@@ -1,5 +1,6 @@
 package com.dicoding.soulsupport.data.remote.refrofit
 
+import okhttp3.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -29,4 +30,8 @@ interface ApiService {
         @Header("Authorization") token: String,
         @Path("id") userId: String
     )
+
+    @FormUrlEncoded
+    @POST("predict")
+    fun sendMessage(@Field("message") message: String): retrofit2.Call<String>
 }

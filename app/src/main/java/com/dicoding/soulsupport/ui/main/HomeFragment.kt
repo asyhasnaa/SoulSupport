@@ -1,5 +1,6 @@
 package com.dicoding.soulsupport.ui.main
 
+import com.dicoding.soulsupport.ui.chat.ChatActivity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +11,6 @@ import androidx.fragment.app.Fragment
 import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.databinding.FragmentHomeBinding
 import com.dicoding.soulsupport.ui.article.ArticleActivity
-import com.dicoding.soulsupport.ui.chat.ChatActivity
 import com.dicoding.soulsupport.ui.meditation.MeditationFragment
 import com.dicoding.soulsupport.ui.note.note.NoteActivity
 import com.dicoding.soulsupport.ui.profile.ProfileFragment
@@ -70,6 +70,7 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
     private fun onBackPressed() {
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
             activity?.finish()
