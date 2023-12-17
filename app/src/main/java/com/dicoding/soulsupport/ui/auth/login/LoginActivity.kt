@@ -6,16 +6,12 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.appcompat.app.AlertDialog
-import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.data.Result
+import com.dicoding.soulsupport.data.model.AuthModel
 import com.dicoding.soulsupport.databinding.ActivityLoginBinding
 import com.dicoding.soulsupport.ui.ViewModelFactory
 import com.dicoding.soulsupport.ui.auth.register.RegisterActivity
-import com.dicoding.soulsupport.ui.auth.register.RegisterViewModel
 import com.dicoding.soulsupport.ui.main.MainActivity
-import com.google.android.material.snackbar.Snackbar
-import java.lang.Exception
 
 class LoginActivity : AppCompatActivity() {
 
@@ -46,14 +42,17 @@ class LoginActivity : AppCompatActivity() {
                         }
                         is Result.Success -> {
                             binding.progressBar.visibility = View.GONE
+                            val token = result.data.accessToken
+                            val email = result.data.user?.email
+                            viewModel.saveToken(AuthModel(email,token))
+                            Toast.makeText(this, "Berhasil", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
                             finish()
-
                         }
                         is Result.Error -> {
                             binding.progressBar.visibility = View.GONE
-                            Toast.makeText(this, result.error, Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "Account Not Found", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }

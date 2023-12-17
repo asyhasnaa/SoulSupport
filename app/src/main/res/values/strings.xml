@@ -11,6 +11,8 @@
     <string name="desc_onboarding3">Melangkah dan menjadi pilar bagi satu sama lain. Soul Support adalah tempat di mana kita saling menguatkan dan tumbuh bersama."</string>
     <string name="btn_onboard">Masuk</string>
     <string name="tv_name">Murphy</string>
+    <string name="pref_key_dark" translatable="false">key_dark_mode</string>
+    <string name="pref_dark_auto" translatable="false">auto</string>
 
     <!--    Text pada halaman Menu-->
     <string name="hello_name">Hello, </string>

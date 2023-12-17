@@ -52,7 +52,7 @@ class RegisterActivity : AppCompatActivity() {
                                     binding.progressBar.visibility = View.GONE
                                     AlertDialog.Builder(this).apply {
                                         setTitle(result.data.msg)
-                                        setMessage("akun dengan nama $name sudah terdaftar")
+                                        setMessage("akun dengan email $email terdaftar")
                                         setPositiveButton("Lanjut") { _, _ ->
                                             finish()
                                         }
@@ -62,7 +62,7 @@ class RegisterActivity : AppCompatActivity() {
                                 }
                                 is Result.Error -> {
                                     binding.progressBar.visibility = View.GONE
-                                    Toast.makeText(this, "Error: " + result.error, Toast.LENGTH_SHORT)
+                                    Toast.makeText(this, "Akun sudah terdaftar", Toast.LENGTH_SHORT)
                                         .show()
                                 }
                             }

@@ -1,15 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Base.Theme.SoulSupport" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/secondary_800</item>
-        <item name="android:colorBackground">@color/primary_100</item>
-        <item name="colorOnBackground">@color/primary_100</item>
-        <item name="colorPrimaryContainer">@color/primary_900</item>
-        <item name="colorOnPrimaryContainer">@color/secondary_500</item>
-
-        // FAB
-        <item name="extendedFloatingActionButtonStyle">@style/Widget.App.ExtendedFloatingActionButton</item>
-        <item name="floatingActionButtonStyle">@style/Widget.App.FloatingActionButton</item>
+        <item name="android:textColor">@color/primary_600</item>
     </style>
 
     <style name="Widget.App.ExtendedFloatingActionButton" parent="Widget.Material3.ExtendedFloatingActionButton.Icon.Primary">

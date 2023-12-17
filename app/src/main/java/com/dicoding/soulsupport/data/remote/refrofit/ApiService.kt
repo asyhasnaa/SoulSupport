@@ -3,7 +3,9 @@ package com.dicoding.soulsupport.data.remote.refrofit
 import com.dicoding.soulsupport.data.remote.response.Data
 import com.dicoding.soulsupport.data.remote.response.DetailUserResponse
 import com.dicoding.soulsupport.data.remote.response.LoginResponse
+import com.dicoding.soulsupport.data.remote.response.LogoutResponse
 import com.dicoding.soulsupport.data.remote.response.RegisterResponse
+import retrofit2.http.DELETE
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -31,6 +33,10 @@ interface ApiService {
     suspend fun getUserId(
         @Path("id") id: Int,
     ) : DetailUserResponse<Data>
+
+    @DELETE("logout")
+    suspend fun logout(): LogoutResponse
+
 
     @FormUrlEncoded
     @POST("predict")

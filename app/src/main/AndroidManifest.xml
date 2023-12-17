@@ -8,7 +8,9 @@
         android:maxSdkVersion="28" />
 
     <application
+        android:name=".ui.MyApplication"
         android:allowBackup="true"
+        android:enableOnBackInvokedCallback="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher_foreground"
@@ -36,9 +38,6 @@
 
         <activity
             android:name=".ui.meditation.MeditationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.article.article.ArticleActivity"
             android:exported="false" />
         <activity
             android:name=".ui.article.detail.DetailArticleActivity"
@@ -70,10 +69,10 @@
             android:name=".ui.auth.register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name=".ui.auth.SplashActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.auth.SplashActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
