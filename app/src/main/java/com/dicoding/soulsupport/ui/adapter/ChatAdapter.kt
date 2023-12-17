@@ -61,6 +61,13 @@ class ChatAdapter : RecyclerView.Adapter<ChatAdapter.MessageViewHolder>() {
         notifyItemInserted(messages.size - 1)
     }
 
+    fun setMessages(messages: List<ChatMessage>) {
+        this.messages.clear()
+        this.messages.addAll(messages)
+        notifyDataSetChanged()
+    }
+
+
     companion object {
         const val USER = 1
         const val BOT = 2

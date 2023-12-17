@@ -15,7 +15,7 @@
     <string name="pref_dark_auto" translatable="false">auto</string>
 
     <!--    Text pada halaman Menu-->
-    <string name="hello_name">Hello, </string>
+    <string name="hello_name">Selamat Datang! </string>
     <string name="tv_home_welcome">Great to see you again!</string>
     <string name="title_menu">What do you want to do?</string>
     <string name="menu_chatbot">Chat with Sarah</string>

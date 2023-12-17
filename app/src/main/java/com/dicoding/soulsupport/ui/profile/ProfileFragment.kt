@@ -39,10 +39,19 @@ class ProfileFragment : Fragment() {
     ): View? {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel.userName.observe(viewLifecycleOwner) { userName ->
+            binding.tvUsername.text = userName
+        }
+
+        viewModel.userEmail.observe(viewLifecycleOwner) { userEmail ->
+            binding.tvEmail.text = userEmail
+        }
 
         if (!cameraViewModel.imageUri.isNullOrEmpty()) {
             val imageUri = Uri.parse(cameraViewModel.imageUri)

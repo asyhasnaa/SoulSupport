@@ -50,12 +50,12 @@
                 motion:customFloatValue="0" />
         </Constraint>
         <Constraint
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:layout_marginTop="32dp"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintLeft_toLeftOf="parent"
-            android:layout_width="70dp"
+            android:layout_width="45dp"
             android:id="@+id/ivLogo"
             android:layout_marginEnd="156dp"
             android:layout_marginRight="156dp" />
@@ -158,12 +158,12 @@
             motion:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="16dp" />
         <Constraint
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:layout_marginTop="32dp"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintLeft_toLeftOf="parent"
-            android:layout_width="70dp"
+            android:layout_width="45dp"
             android:id="@+id/ivLogo"
             android:layout_marginEnd="156dp"
             android:layout_marginRight="156dp" />
@@ -252,12 +252,12 @@
             android:id="@+id/ivDescWelcome3"
             motion:layout_constraintEnd_toEndOf="@+id/Menu3" />
         <Constraint
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:layout_marginTop="32dp"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintLeft_toLeftOf="parent"
-            android:layout_width="70dp"
+            android:layout_width="45dp"
             android:id="@+id/ivLogo"
             android:layout_marginEnd="156dp"
             android:layout_marginRight="156dp" />

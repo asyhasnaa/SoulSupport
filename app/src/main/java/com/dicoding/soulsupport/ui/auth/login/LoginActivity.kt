@@ -44,7 +44,8 @@ class LoginActivity : AppCompatActivity() {
                             binding.progressBar.visibility = View.GONE
                             val token = result.data.accessToken
                             val email = result.data.user?.email
-                            viewModel.saveToken(AuthModel(email,token))
+                            val name = result.data.user?.name
+                            viewModel.saveToken(AuthModel(email,name, token))
                             Toast.makeText(this, "Berhasil", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)

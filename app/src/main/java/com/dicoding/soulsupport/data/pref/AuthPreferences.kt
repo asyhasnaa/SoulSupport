@@ -17,6 +17,7 @@ class AuthPreferences private constructor(private val dataStore: DataStore<Prefe
     suspend fun saveToken(authModel: AuthModel) {
         dataStore.edit { preferences ->
             preferences[EMAIL_KEY] = authModel.email.toString()
+            preferences[NAME_KEY] = authModel.name.toString()
             preferences[TOKEN_KEY] = authModel.token.toString()
             preferences[IS_LOGIN_KEY] = true
         }
@@ -25,6 +26,7 @@ class AuthPreferences private constructor(private val dataStore: DataStore<Prefe
         return dataStore.data.map { preference ->
             AuthModel(
                 preference[EMAIL_KEY] ?: "",
+                preference[NAME_KEY] ?: "",
                 preference[TOKEN_KEY] ?: "",
                 preference[IS_LOGIN_KEY] ?: false
             )
@@ -56,6 +58,7 @@ class AuthPreferences private constructor(private val dataStore: DataStore<Prefe
         private var INSTANCE: AuthPreferences? = null
 
         private val EMAIL_KEY = stringPreferencesKey("email")
+        private val NAME_KEY = stringPreferencesKey("name")
         private val TOKEN_KEY = stringPreferencesKey("token")
         private val IS_LOGIN_KEY = booleanPreferencesKey("isLogin")
         //Theme

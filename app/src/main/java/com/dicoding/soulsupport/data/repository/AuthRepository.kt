@@ -22,7 +22,8 @@ class AuthRepository(
     private val apiService: ApiService,
     private val authPreferences: AuthPreferences
 ) {
-    fun register(name:String,email:String,password: String,confirmPassword: String): LiveData<Result<RegisterResponse>> = liveData{
+    fun register(name:String, email:String, password: String, confirmPassword: String): LiveData<Result<RegisterResponse>> = liveData{
+
         emit(Result.Loading)
         try {
             val response = apiService.register(name,email,password,confirmPassword)

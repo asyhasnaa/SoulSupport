@@ -33,18 +33,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:fontFamily="@font/poppins_semi_bold_italic"
-                android:text="@string/tv_name"
-                android:textColor="@color/primary_900"
-                android:textSize="25sp"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_welcome_name"
-                app:layout_constraintStart_toEndOf="@+id/tv_welcome_name"
-                app:layout_constraintTop_toTopOf="@+id/tv_welcome_name" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="45dp"
@@ -54,9 +42,9 @@
                 android:backgroundTint="@color/secondary_200"
                 android:padding="5dp"
                 app:cardCornerRadius="100dp"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_welcome_name"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_name">
+                app:layout_constraintTop_toTopOf="@+id/tv_welcome_name">
 
                 <ImageView
                     android:id="@+id/iv_profile"
