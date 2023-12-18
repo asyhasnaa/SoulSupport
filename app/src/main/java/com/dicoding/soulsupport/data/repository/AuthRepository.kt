@@ -21,13 +21,7 @@ class AuthRepository(
     private val apiService: ApiService,
     private val authPreferences: AuthPreferences
 ) {
-    fun register(
-        name: String,
-        email: String,
-        password: String,
-        confirmPassword: String
-    ): LiveData<Result<RegisterResponse>> = liveData {
-
+    fun register(name: String, email: String, password: String, confirmPassword: String): LiveData<Result<RegisterResponse>> = liveData {
         emit(Result.Loading)
         try {
             val response = apiService.register(name, email, password, confirmPassword)
@@ -52,26 +46,6 @@ class AuthRepository(
             val errorMessage = errorBody.message
             Log.d("Repository", "login user: $errorMessage ")
             emit(Result.Error(errorMessage.toString()))
-        }
-    }
-
-    fun getUserId(id: Int): LiveData<Result<DetailUserResponse<Data>>> = liveData {
-        emit(Result.Loading)
-        try {
-            val response = apiService.getUserId(id)
-            emit(Result.Success(response))
-        } catch (e: HttpException) {
-            error(Result.Error("Logout failed"))
-        }
-    }
-
-    fun logOut(): LiveData<Result<LogoutResponse>> = liveData {
-        emit(Result.Loading)
-        try {
-            val response = apiService.logout()
-            emit(Result.Success(response))
-        } catch (e: HttpException) {
-            emit(Result.Error("Account not found"))
         }
     }
 

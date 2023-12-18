@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CompoundButton
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
@@ -17,6 +18,7 @@ import com.dicoding.soulsupport.databinding.FragmentProfileBinding
 import com.dicoding.soulsupport.ui.ViewModelFactory
 import com.dicoding.soulsupport.ui.camera.CameraActivity
 import com.dicoding.soulsupport.ui.camera.CameraViewModel
+import com.dicoding.soulsupport.ui.setting.SettingActivty
 
 class ProfileFragment : Fragment() {
 
@@ -25,16 +27,14 @@ class ProfileFragment : Fragment() {
     private val viewModel by viewModels<ProfileViewModel> {
         ViewModelFactory.getInstance(requireContext())
     }
-    private val darkViewModel by viewModels<DarkModeViewModel> {
-        ViewModelFactory.getInstance(requireContext())
-    }
+
 
     private val CAMERA_REQUEST_CODE = 123
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
 
@@ -42,14 +42,6 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        if (!cameraViewModel.imageUri.isNullOrEmpty()) {
-            val imageUri = Uri.parse(cameraViewModel.imageUri)
-
-            Glide.with(requireContext())
-                .load(imageUri)
-                .into(binding.imgProfile)
-        }
 
         viewModel.userName.observe(viewLifecycleOwner) { userName ->
             binding.tvUsername.text = userName
@@ -59,31 +51,26 @@ class ProfileFragment : Fragment() {
             binding.tvEmail.text = userEmail
         }
 
-        switchTheme()
+        if (!cameraViewModel.imageUri.isNullOrEmpty()) {
+            val imageUri = Uri.parse(cameraViewModel.imageUri)
+
+            Glide.with(requireContext())
+                .load(imageUri)
+                .into(binding.imgProfile)
+        }
+
+        actionSetting()
         actionCamera()
         logout()
         onBack()
+
     }
 
-    private fun switchTheme() {
-        darkViewModel.getThemeSettings().observe(viewLifecycleOwner) { isDarkModeActive: Boolean ->
-            binding.swithMode.isChecked = isDarkModeActive
-            updateAppTheme(isDarkModeActive)
-        }
-        binding.swithMode.setOnCheckedChangeListener { _, isChecked ->
-            darkViewModel.saveThemeSetting(isChecked)
-            updateAppTheme(isChecked)
+    private fun actionSetting() {
+        binding.nightMode.setOnClickListener {
+            startActivity(Intent(requireContext(), SettingActivty::class.java))
         }
     }
-
-    private fun updateAppTheme(isDarkModeActive: Boolean) {
-        if (isDarkModeActive) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        }
-    }
-
 
     private fun actionCamera() {
         binding.imgProfile.setOnClickListener {
@@ -92,7 +79,7 @@ class ProfileFragment : Fragment() {
         }
     }
 
-    private fun logout() {
+    private fun logout(){
         binding.logout.setOnClickListener {
 
             AlertDialog.Builder(requireContext()).apply {
@@ -102,6 +89,7 @@ class ProfileFragment : Fragment() {
                     viewModel.logout()
                 }
                 setNegativeButton("Tidak") { _, _ ->
+                    // Handle the case where the user chooses not to exit
                 }
                 create()
                 show()
@@ -109,7 +97,6 @@ class ProfileFragment : Fragment() {
 
         }
     }
-
     private fun onBack() {
         binding.btnBack.setOnClickListener {
             requireActivity().onBackPressed()

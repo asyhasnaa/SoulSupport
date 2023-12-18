@@ -11,11 +11,9 @@ import com.dicoding.soulsupport.di.Injection
 import com.dicoding.soulsupport.ui.auth.login.LoginViewModel
 import com.dicoding.soulsupport.ui.auth.register.RegisterViewModel
 import com.dicoding.soulsupport.ui.main.MainViewModel
-import com.dicoding.soulsupport.ui.profile.DarkModeViewModel
 import com.dicoding.soulsupport.ui.profile.ProfileViewModel
 
 class ViewModelFactory(
-    private val authPreferences: AuthPreferences,
     private val repository: AuthRepository
 ) :
     ViewModelProvider.NewInstanceFactory() {
@@ -27,7 +25,6 @@ class ViewModelFactory(
             LoginViewModel::class.java -> LoginViewModel(repository)
             MainViewModel::class.java -> MainViewModel(repository)
             ProfileViewModel::class.java -> ProfileViewModel(repository)
-            DarkModeViewModel::class.java -> DarkModeViewModel(authPreferences)
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         } as T
 
@@ -40,7 +37,7 @@ class ViewModelFactory(
         fun getInstance(context: Context): ViewModelFactory {
             if (INSTANCE == null) {
                 synchronized(ViewModelFactory::class.java) {
-                    INSTANCE = ViewModelFactory(AuthPreferences.getInstance(context.dataStore),Injection.provideRepository(context))
+                    INSTANCE = ViewModelFactory(Injection.provideRepository(context))
                 }
             }
             return INSTANCE as ViewModelFactory

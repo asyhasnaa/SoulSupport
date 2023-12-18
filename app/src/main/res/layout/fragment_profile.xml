@@ -137,14 +137,14 @@
                         android:text="@string/night_mode"
                         android:textColor="@color/secondary_900" />
 
-                    <com.google.android.material.switchmaterial.SwitchMaterial
-                        android:id="@+id/swith_mode"
+                    <ImageView
+                        android:id="@+id/night_mode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:switchMinWidth="50dp"
-                        android:theme="@style/nightModeSwitch" />
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_right_arrow" />
 
                 </RelativeLayout>
 
@@ -173,15 +173,15 @@
                         android:text="@string/notification"
                         android:textColor="@color/secondary_900" />
 
-                    <androidx.appcompat.widget.SwitchCompat
-                        android:id="@+id/notif_switch"
+                    <ImageView
+                        android:id="@+id/notification"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:switchMinWidth="50dp"
-                        android:theme="@style/notificationSwitch"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_right_arrow" />
+
 
                 </RelativeLayout>
 

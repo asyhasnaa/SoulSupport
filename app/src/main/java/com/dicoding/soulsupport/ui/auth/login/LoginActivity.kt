@@ -45,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
                             val token = result.data.accessToken
                             val email = result.data.user?.email
                             val name = result.data.user?.name
-                            viewModel.saveToken(AuthModel(email,name, token))
+                            viewModel.saveToken(AuthModel(email!!,name!!, token!!))
                             Toast.makeText(this, "Berhasil", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)

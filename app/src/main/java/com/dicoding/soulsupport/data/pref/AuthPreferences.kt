@@ -38,18 +38,6 @@ class AuthPreferences private constructor(private val dataStore: DataStore<Prefe
         }
     }
 
-    fun getThemeSetting(): Flow<Boolean> {
-        return dataStore.data.map { preferences ->
-            preferences[THEME_KEY] ?: false
-        }
-    }
-
-    suspend fun saveThemeSetting(isDarkModeActive: Boolean) {
-        dataStore.edit { preferences ->
-            preferences[THEME_KEY] = isDarkModeActive
-        }
-    }
-
 
 
 

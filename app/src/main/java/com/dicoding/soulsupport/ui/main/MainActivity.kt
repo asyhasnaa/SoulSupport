@@ -11,6 +11,8 @@ import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.databinding.ActivityMainBinding
 import com.dicoding.soulsupport.ui.ViewModelFactory
 import com.dicoding.soulsupport.ui.auth.SplashActivity
+import com.dicoding.soulsupport.ui.auth.login.LoginViewModel
+import com.dicoding.soulsupport.ui.auth.welcome.WelcomeActivity
 import com.dicoding.soulsupport.ui.chat.ChatFragment
 import com.dicoding.soulsupport.ui.meditation.MeditationFragment
 import com.dicoding.soulsupport.ui.profile.ProfileFragment
@@ -28,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         observerUserLogin()
         bottomNavigation()
@@ -55,6 +58,7 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         val currentFragment = supportFragmentManager.findFragmentById(R.id.frame_container)
         if (currentFragment is ChatFragment || currentFragment is MeditationFragment || currentFragment is ProfileFragment) {
+            // Navigate back to the home fragment or perform the desired action
             bottomNavigationView.selectedItemId = R.id.bottom_home
         } else {
             super.onBackPressed()
@@ -62,11 +66,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun observerUserLogin() {
-        viewModel.getUser().observe(this) { user ->
+        viewModel.getUser().observe(this) {user ->
             if (!user.isLogin) {
-                showProgressBar()
+               showProgressBar()
                 navigateToSplashScreen()
             } else {
+                //
             }
         }
     }
