@@ -6,8 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dicoding.soulsupport.data.repository.AuthRepository
 import kotlinx.coroutines.launch
-import com.dicoding.soulsupport.data.Result
-import com.dicoding.soulsupport.data.model.AuthModel
 
 class ProfileViewModel(private val repository: AuthRepository) : ViewModel() {
 
@@ -17,7 +15,18 @@ class ProfileViewModel(private val repository: AuthRepository) : ViewModel() {
     private val _userEmail = MutableLiveData<String?>()
     val userEmail: LiveData<String?> get() = _userEmail
 
+    private suspend fun fetchUserInfo() {
+        repository.getUserInfo().collect { authModel ->
+            _userName.postValue(authModel.name)
+            _userEmail.postValue(authModel.email)
+        }
+    }
 
+    init {
+        viewModelScope.launch {
+            fetchUserInfo()
+        }
+    }
 
     fun logout() {
         viewModelScope.launch {

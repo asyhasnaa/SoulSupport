@@ -1,6 +1,5 @@
 package com.dicoding.soulsupport.ui.main
 
-import com.dicoding.soulsupport.ui.chat.ChatActivity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,9 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.databinding.FragmentHomeBinding
+import com.dicoding.soulsupport.ui.ViewModelFactory
 import com.dicoding.soulsupport.ui.article.ArticleActivity
+import com.dicoding.soulsupport.ui.chat.ChatActivity
 import com.dicoding.soulsupport.ui.meditation.MeditationFragment
 import com.dicoding.soulsupport.ui.note.note.NoteActivity
 import com.dicoding.soulsupport.ui.profile.ProfileFragment
@@ -20,6 +22,9 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private val viewModel by viewModels<MainViewModel> {
+        ViewModelFactory.getInstance(requireContext())
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +38,10 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupClickListeners()
         onBackPressed()
+
+        viewModel.userName.observe(viewLifecycleOwner) { userName ->
+            binding.tvName.text = userName
+        }
     }
 
     private fun setupClickListeners() {

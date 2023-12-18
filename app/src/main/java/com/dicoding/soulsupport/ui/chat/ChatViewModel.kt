@@ -1,3 +1,5 @@
+package com.dicoding.soulsupport.ui.chat
+
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.lifecycle.MutableLiveData
@@ -20,7 +22,12 @@ class ChatViewModel : ViewModel() {
             chatHistory.value = gson.fromJson(it, type)
         }
     }
-
+    fun deleteMessage(message: ChatMessage) {
+        val updatedChatHistory = chatHistory.value ?: mutableListOf()
+        updatedChatHistory.remove(message)
+        chatHistory.value = updatedChatHistory
+        saveChatHistory()
+    }
     fun saveChatHistory() {
         val chatHistoryJson = gson.toJson(chatHistory.value)
         sharedPreferences.edit().putString("chatHistory", chatHistoryJson).apply()

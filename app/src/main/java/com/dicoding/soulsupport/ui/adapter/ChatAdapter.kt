@@ -9,9 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.data.model.ChatMessage
 
-class ChatAdapter : RecyclerView.Adapter<ChatAdapter.MessageViewHolder>() {
+class ChatAdapter(private val itemClickListener: OnItemClickListener) :
+    RecyclerView.Adapter<ChatAdapter.MessageViewHolder>() {
 
     private val messages: MutableList<ChatMessage> = mutableListOf()
+    private var isTyping: Boolean = false
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -41,14 +43,30 @@ class ChatAdapter : RecyclerView.Adapter<ChatAdapter.MessageViewHolder>() {
                 userMessageTextView.visibility = View.GONE
                 botMessageTextView.visibility = View.VISIBLE
 
-                botMessageTextView.text = message.text
-                val backgroundDrawable = R.drawable.receive_box
-                val backgroundTint = R.color.secondary_400
+                if (isTyping) {
+                    botMessageTextView.text = "Typing..."
+                } else {
+                    botMessageTextView.text = message.text
+                    val backgroundDrawable = R.drawable.receive_box
+                    val backgroundTint = R.color.secondary_400
 
-                botMessageTextView.setBackgroundResource(backgroundDrawable)
-                botMessageTextView.backgroundTintList = ContextCompat.getColorStateList(itemView.context, backgroundTint)
+                    botMessageTextView.setBackgroundResource(backgroundDrawable)
+                    botMessageTextView.backgroundTintList =
+                        ContextCompat.getColorStateList(itemView.context, backgroundTint)
+                }
             }
         }
+
+        init {
+            itemView.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val clickedMessage = messages[position]
+                    itemClickListener.onItemClick(clickedMessage)
+                }
+            }
+        }
+
     }
 
     fun addUserMessage(message: String) {
@@ -67,6 +85,23 @@ class ChatAdapter : RecyclerView.Adapter<ChatAdapter.MessageViewHolder>() {
         notifyDataSetChanged()
     }
 
+    fun addTypingMessage() {
+        isTyping = true
+        messages.add(ChatMessage("", BOT))
+        notifyItemInserted(messages.size - 1)
+    }
+
+    fun removeTypingMessage() {
+        if (isTyping) {
+            isTyping = false
+            messages.removeAt(messages.size - 1)
+            notifyItemRemoved(messages.size)
+        }
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(message: ChatMessage)
+    }
 
     companion object {
         const val USER = 1

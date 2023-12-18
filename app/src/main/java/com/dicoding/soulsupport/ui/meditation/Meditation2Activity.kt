@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.databinding.ActivityMeditation2Binding
 
+@Suppress("DEPRECATION")
 class Meditation2Activity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMeditation2Binding
@@ -28,12 +29,20 @@ class Meditation2Activity : AppCompatActivity() {
         binding.seekbar.max = mediaPlayer.duration
 
         binding.play.setOnClickListener {
-            mediaPlayer.start()
+            if (!mediaPlayer.isPlaying) {
+                mediaPlayer.start()
+                binding.play.setImageResource(R.drawable.ic_pause)
+            } else {
+                mediaPlayer.pause()
+                binding.play.setImageResource(R.drawable.ic_play)
+            }
         }
-        binding.pause.setOnClickListener {
-            mediaPlayer.pause()
+
+        binding.next.setOnClickListener {
+            mediaPlayer.stop()
+            showToastAndNavigate()
         }
-        binding.stop.setOnClickListener {
+        binding.previous.setOnClickListener {
             mediaPlayer.stop()
             showToastAndNavigate()
         }
@@ -44,10 +53,8 @@ class Meditation2Activity : AppCompatActivity() {
                     mediaPlayer.seekTo(progress)
                 }
             }
-
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
             }
-
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
             }
         })
@@ -64,17 +71,9 @@ class Meditation2Activity : AppCompatActivity() {
     }
 
     private fun showToastAndNavigate() {
-        Toast.makeText(this, "Meditation Finished", Toast.LENGTH_SHORT).show()
-        val intent = Intent(this, MeditationFragment::class.java)
+        Toast.makeText(this, "Better Sleep Finished", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, MeditationActivity::class.java)
         startActivity(intent)
-        finish()
-    }
-
-    override fun onPause() {
-        super.onPause()
-        if (mediaPlayer.isPlaying) {
-            mediaPlayer.pause()
-        }
     }
 
     override fun onDestroy() {

@@ -44,7 +44,7 @@
 
     <!-- Styling Indicator Bottom Navigation -->
     <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
-        <item name="android:color">@color/primary_300</item>
+        <item name="android:color">@color/secondary_400</item>
     </style>
 
     <style name="ShapeAppearanceOverlay.Fab.Circle" parent="">

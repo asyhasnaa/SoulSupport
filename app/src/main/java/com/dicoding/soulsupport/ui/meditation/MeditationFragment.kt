@@ -35,12 +35,15 @@ class MeditationFragment : Fragment() {
         binding.cardView2.setOnClickListener {
             startActivity(Intent(requireContext(), Meditation2Activity::class.java))
         }
+        binding.cardView3.setOnClickListener {
+            startActivity(Intent(requireContext(), MeditationActivity::class.java))
+        }
     }
+
+    @Suppress("DEPRECATION")
     private fun onBack() {
         binding.btnBack.setOnClickListener {
             requireActivity().onBackPressed()
         }
     }
-
-
 }

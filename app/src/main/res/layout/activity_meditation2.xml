@@ -100,43 +100,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seekbar">
 
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/pause"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_margin="8dp"
-            android:backgroundTint="@color/primary_100"
-            android:clickable="true"
+        <ImageButton
+            android:id="@+id/previous"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/round_back_night"
+            android:backgroundTint="@color/primary_900"
             android:contentDescription="@string/tv_better_sleep"
-            app:maxImageSize="40dp"
-            app:shapeAppearance="@style/ShapeAppearanceOverlay.Fab.Circle"
-            app:srcCompat="@drawable/ic_pause"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            android:src="@drawable/ic_previous"
+            app:maxImageSize="90dp"
+            tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/play"
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:layout_margin="4dp"
-            android:backgroundTint="@color/primary_100"
+            android:backgroundTint="@color/primary_900"
             android:clickable="true"
+            android:contentDescription="@string/tv_better_sleep"
             app:maxImageSize="45dp"
+            app:tint="@android:color/white"
             app:shapeAppearance="@style/ShapeAppearanceOverlay.Fab.Circle"
-            app:srcCompat="@drawable/ic_play"
-            android:contentDescription="@string/tv_better_sleep" />
+            app:srcCompat="@drawable/ic_play" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/stop"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_margin="4dp"
-            android:backgroundTint="@color/primary_100"
-            android:clickable="true"
-            app:maxImageSize="40dp"
-            app:shapeAppearance="@style/ShapeAppearanceOverlay.Fab.Circle"
-            app:srcCompat="@drawable/ic_stop"
-            android:contentDescription="@string/tv_better_sleep" />
+            android:background="@drawable/round_back_night"
+            android:backgroundTint="@color/primary_900"
+            android:contentDescription="@string/tv_better_sleep"
+            android:src="@drawable/ic_next"
+            app:maxImageSize="90dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </LinearLayout>
 

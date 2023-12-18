@@ -29,55 +29,56 @@ class MeditationActivity : AppCompatActivity() {
         binding.seekbar.max = mediaPlayer.duration
 
         binding.play.setOnClickListener {
-            mediaPlayer.start()
-        }
-        binding.pause.setOnClickListener {
-            mediaPlayer.pause()
-        }
-        binding.stop.setOnClickListener {
-            mediaPlayer.stop()
-            showToastAndNavigate()
-        }
+            if (!mediaPlayer.isPlaying) {
+                mediaPlayer.start()
+                binding.play.setImageResource(R.drawable.ic_pause)
+            } else {
+                mediaPlayer.pause()
+                binding.play.setImageResource(R.drawable.ic_play)
+            }
+            binding.next.setOnClickListener {
+                mediaPlayer.stop()
+                showToastAndNavigate()
+            }
+            binding.previous.setOnClickListener {
+                mediaPlayer.stop()
+                showToastAndNavigate()
+            }
 
-        binding.seekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                if (fromUser) {
-                    mediaPlayer.seekTo(progress)
+            binding.seekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+                override fun onProgressChanged(
+                    seekBar: SeekBar?,
+                    progress: Int,
+                    fromUser: Boolean
+                ) {
+                    if (fromUser) {
+                        mediaPlayer.seekTo(progress)
+                    }
                 }
-            }
 
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {
-            }
+                override fun onStartTrackingTouch(seekBar: SeekBar?) {
+                }
 
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {
-            }
-        })
+                override fun onStopTrackingTouch(seekBar: SeekBar?) {
+                }
+            })
 
-        runnable = Runnable {
-            binding.seekbar.progress = mediaPlayer.currentPosition
+            runnable = Runnable {
+                binding.seekbar.progress = mediaPlayer.currentPosition
+                handler.postDelayed(runnable, 1000)
+            }
             handler.postDelayed(runnable, 1000)
-        }
-        handler.postDelayed(runnable, 1000)
 
-        mediaPlayer.setOnCompletionListener {
-            binding.seekbar.progress = 0
+            mediaPlayer.setOnCompletionListener {
+                binding.seekbar.progress = 0
+            }
         }
     }
-
     private fun showToastAndNavigate() {
-        Toast.makeText(this, "Meditation Finished", Toast.LENGTH_SHORT).show()
-        val intent = Intent(this, MeditationFragment::class.java)
+        Toast.makeText(this, "Release Stress Finished", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, Meditation2Activity::class.java)
         startActivity(intent)
-        finish()
     }
-
-    override fun onPause() {
-        super.onPause()
-        if (mediaPlayer.isPlaying) {
-            mediaPlayer.pause()
-        }
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         mediaPlayer.stop()

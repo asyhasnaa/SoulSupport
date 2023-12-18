@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/bottom_home"
-        android:title="Home"
+        android:title="@string/home"
         android:icon="@drawable/ic_home"/>
 
     <item
@@ -13,12 +13,12 @@
 
     <item
         android:id="@+id/bottom_chat"
-        android:title="Chatbot"
+        android:title="@string/chat"
         android:icon="@drawable/ic_chatbot"/>
 
     <item
         android:id="@+id/bottom_profile"
-        android:title="Profile"
+        android:title="@string/profile"
         android:icon="@drawable/ic_person"/>
 
 </menu>

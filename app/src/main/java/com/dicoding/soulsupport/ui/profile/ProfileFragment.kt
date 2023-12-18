@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CompoundButton
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
@@ -30,13 +29,12 @@ class ProfileFragment : Fragment() {
         ViewModelFactory.getInstance(requireContext())
     }
 
-
     private val CAMERA_REQUEST_CODE = 123
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
 
@@ -44,14 +42,6 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel.userName.observe(viewLifecycleOwner) { userName ->
-            binding.tvUsername.text = userName
-        }
-
-        viewModel.userEmail.observe(viewLifecycleOwner) { userEmail ->
-            binding.tvEmail.text = userEmail
-        }
 
         if (!cameraViewModel.imageUri.isNullOrEmpty()) {
             val imageUri = Uri.parse(cameraViewModel.imageUri)
@@ -61,11 +51,18 @@ class ProfileFragment : Fragment() {
                 .into(binding.imgProfile)
         }
 
+        viewModel.userName.observe(viewLifecycleOwner) { userName ->
+            binding.tvUsername.text = userName
+        }
+
+        viewModel.userEmail.observe(viewLifecycleOwner) { userEmail ->
+            binding.tvEmail.text = userEmail
+        }
+
         switchTheme()
         actionCamera()
         logout()
         onBack()
-
     }
 
     private fun switchTheme() {
@@ -95,7 +92,7 @@ class ProfileFragment : Fragment() {
         }
     }
 
-    private fun logout(){
+    private fun logout() {
         binding.logout.setOnClickListener {
 
             AlertDialog.Builder(requireContext()).apply {
@@ -105,7 +102,6 @@ class ProfileFragment : Fragment() {
                     viewModel.logout()
                 }
                 setNegativeButton("Tidak") { _, _ ->
-                    // Handle the case where the user chooses not to exit
                 }
                 create()
                 show()
@@ -113,6 +109,7 @@ class ProfileFragment : Fragment() {
 
         }
     }
+
     private fun onBack() {
         binding.btnBack.setOnClickListener {
             requireActivity().onBackPressed()

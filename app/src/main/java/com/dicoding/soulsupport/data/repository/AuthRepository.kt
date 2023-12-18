@@ -1,19 +1,18 @@
 package com.dicoding.soulsupport.data.repository
 
 import android.util.Log
-import kotlinx.coroutines.*
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
-import com.dicoding.soulsupport.data.remote.refrofit.ApiService
-import com.dicoding.soulsupport.data.remote.response.RegisterResponse
 import com.dicoding.soulsupport.data.Result
 import com.dicoding.soulsupport.data.model.AuthModel
 import com.dicoding.soulsupport.data.pref.AuthPreferences
+import com.dicoding.soulsupport.data.remote.refrofit.ApiService
 import com.dicoding.soulsupport.data.remote.response.Data
 import com.dicoding.soulsupport.data.remote.response.DetailUserResponse
 import com.dicoding.soulsupport.data.remote.response.ErrorResponse
 import com.dicoding.soulsupport.data.remote.response.LoginResponse
 import com.dicoding.soulsupport.data.remote.response.LogoutResponse
+import com.dicoding.soulsupport.data.remote.response.RegisterResponse
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow
 import retrofit2.HttpException
@@ -22,13 +21,18 @@ class AuthRepository(
     private val apiService: ApiService,
     private val authPreferences: AuthPreferences
 ) {
-    fun register(name:String, email:String, password: String, confirmPassword: String): LiveData<Result<RegisterResponse>> = liveData{
+    fun register(
+        name: String,
+        email: String,
+        password: String,
+        confirmPassword: String
+    ): LiveData<Result<RegisterResponse>> = liveData {
 
         emit(Result.Loading)
         try {
-            val response = apiService.register(name,email,password,confirmPassword)
+            val response = apiService.register(name, email, password, confirmPassword)
             emit(Result.Success(response))
-        }catch (e: HttpException) {
+        } catch (e: HttpException) {
             val jsonInString = e.response()?.errorBody()?.string()
             val errorBody = Gson().fromJson(jsonInString, ErrorResponse::class.java)
             val errorMessage = errorBody.message
@@ -37,12 +41,12 @@ class AuthRepository(
         }
     }
 
-    fun login(email: String,password: String) : LiveData<Result<LoginResponse>> = liveData {
+    fun login(email: String, password: String): LiveData<Result<LoginResponse>> = liveData {
         emit(Result.Loading)
         try {
             val response = apiService.login(email, password)
             emit(Result.Success(response))
-        }catch (e: HttpException) {
+        } catch (e: HttpException) {
             val jsonInString = e.response()?.errorBody()?.string()
             val errorBody = Gson().fromJson(jsonInString, ErrorResponse::class.java)
             val errorMessage = errorBody.message
@@ -56,17 +60,17 @@ class AuthRepository(
         try {
             val response = apiService.getUserId(id)
             emit(Result.Success(response))
-        }catch (e: HttpException) {
+        } catch (e: HttpException) {
             error(Result.Error("Logout failed"))
         }
     }
 
-    fun logOut(): LiveData<Result<LogoutResponse>> = liveData{
+    fun logOut(): LiveData<Result<LogoutResponse>> = liveData {
         emit(Result.Loading)
         try {
             val response = apiService.logout()
             emit(Result.Success(response))
-        }catch (e: HttpException) {
+        } catch (e: HttpException) {
             emit(Result.Error("Account not found"))
         }
     }
@@ -77,6 +81,10 @@ class AuthRepository(
 
     fun getUser(): Flow<AuthModel> {
         return authPreferences.getSession()
+    }
+
+    fun getUserInfo(): Flow<AuthModel> {
+        return getUser()
     }
 
     suspend fun logout() {
@@ -91,7 +99,7 @@ class AuthRepository(
             apiService: ApiService
         ): AuthRepository =
             instance ?: synchronized(this) {
-                instance ?: AuthRepository(apiService,authPreferences)
+                instance ?: AuthRepository(apiService, authPreferences)
             }.also { instance = it }
     }
 }

@@ -19,11 +19,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_menu"
-        android:background="@color/secondary_900"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
+        android:background="@color/white"
+        app:itemIconTint="@color/secondary_900"
+        app:itemTextColor="@color/secondary_900"
         app:itemIconSize="25sp"
-        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"/>
+        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
+        tools:ignore="VisualLintBottomNav" />
 
     <ProgressBar
         android:id="@+id/progressBar"

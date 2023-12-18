@@ -18,7 +18,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/name_info"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/tv_welcome_name"
@@ -26,13 +26,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="24dp"
-                android:fontFamily="@font/poppins_bold_italic"
+                android:fontFamily="@font/poppins_semi_bold_italic"
                 android:text="@string/hello_name"
                 android:textColor="@color/primary_900"
                 android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/poppins_medium_italic"
+                android:text="@string/tv_name"
+                android:textColor="@color/primary_900"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_welcome_name"
+                app:layout_constraintStart_toEndOf="@+id/tv_welcome_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_welcome_name" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="45dp"
@@ -42,15 +54,16 @@
                 android:backgroundTint="@color/secondary_200"
                 android:padding="5dp"
                 app:cardCornerRadius="100dp"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_welcome_name"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_name"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_welcome_name">
+                app:layout_constraintTop_toTopOf="@+id/tv_name">
 
                 <ImageView
                     android:id="@+id/iv_profile"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/user" />
+                    android:src="@drawable/user"
+                    android:contentDescription="@string/image_user" />
 
             </androidx.cardview.widget.CardView>
 
@@ -84,7 +97,8 @@
                 android:src="@drawable/img_home"
                 app:layout_constraintBottom_toBottomOf="@+id/banner"
                 app:layout_constraintEnd_toEndOf="@+id/banner"
-                app:layout_constraintTop_toBottomOf="@id/tv_descName" />
+                app:layout_constraintTop_toBottomOf="@id/tv_descName"
+                android:contentDescription="@string/title_welcome" />
 
             <TextView
                 android:id="@+id/desc1"
@@ -93,12 +107,13 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:fontFamily="@font/poppins_semi_bold_italic"
-                android:text="Friendship Beyond"
+                android:text="@string/friendship_beyond"
                 android:textColor="@color/primary_50"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/desc2"
                 app:layout_constraintStart_toStartOf="@+id/banner"
-                app:layout_constraintTop_toTopOf="@id/banner" />
+                app:layout_constraintTop_toTopOf="@id/banner"
+                tools:ignore="TextSizeCheck" />
 
             <TextView
                 android:id="@+id/desc2"
@@ -106,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="42dp"
                 android:fontFamily="@font/poppins_semi_bold_italic"
-                android:text="Words:"
+                android:text="@string/words"
                 android:textColor="@color/primary_50"
                 android:textSize="32sp"
                 app:layout_constraintEnd_toEndOf="@+id/desc1"
@@ -121,7 +136,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="16dp"
                 android:fontFamily="@font/poppins_italic"
-                android:text="Your mental health support"
+                android:text="@string/your_mental_health_support"
                 android:textColor="@color/primary_50"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@id/banner"
@@ -168,7 +183,8 @@
                         android:src="@drawable/ic_chat"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/menu_chatbot" />
 
                     <TextView
                         android:id="@+id/tv_chatbot"
@@ -191,7 +207,7 @@
                         android:layout_marginEnd="35dp"
                         android:fontFamily="@font/poppins_regular"
                         android:lineSpacingExtra="4dp"
-                        android:text="Save place to share your thought"
+                        android:text="@string/desc_chat"
                         android:textColor="@color/primary_900"
                         android:textSize="13sp"
                         app:layout_constraintBottom_toBottomOf="@+id/iv_chatbot"
@@ -207,7 +223,8 @@
                         app:layout_constraintBottom_toBottomOf="@id/tvDesc_chatbot"
                         app:layout_constraintStart_toEndOf="@id/tvDesc_chatbot"
                         app:layout_constraintTop_toTopOf="@id/tv_chatbot"
-                        app:tint="@color/primary_900" />
+                        app:tint="@color/primary_900"
+                        android:contentDescription="@string/next_arrow" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
@@ -241,7 +258,8 @@
                         android:src="@drawable/ic_note"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/menu_note" />
 
                     <TextView
                         android:id="@+id/tv_notes"
@@ -263,7 +281,7 @@
                         android:layout_marginEnd="35dp"
                         android:fontFamily="@font/poppins_regular"
                         android:lineSpacingExtra="4dp"
-                        android:text="Tell us about your day"
+                        android:text="@string/desc_note"
                         android:textColor="@color/primary_900"
                         android:textSize="13sp"
                         app:layout_constraintBottom_toBottomOf="@+id/iv_notes"
@@ -279,7 +297,8 @@
                         app:layout_constraintBottom_toBottomOf="@id/tvDesc_notes"
                         app:layout_constraintStart_toEndOf="@id/tvDesc_notes"
                         app:layout_constraintTop_toTopOf="@id/tv_notes"
-                        app:tint="@color/primary_900" />
+                        app:tint="@color/primary_900"
+                        android:contentDescription="@string/next_arrow" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
@@ -312,7 +331,8 @@
                         android:src="@drawable/ic_mediasi"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/menu_meditation" />
 
                     <TextView
                         android:id="@+id/tv_meditate"
@@ -335,7 +355,7 @@
                         android:layout_marginEnd="35dp"
                         android:fontFamily="@font/poppins_regular"
                         android:lineSpacingExtra="4dp"
-                        android:text="Get your soul space to relax"
+                        android:text="@string/desc_meditate"
                         android:textColor="@color/primary_900"
                         android:textSize="13sp"
                         app:layout_constraintBottom_toBottomOf="@+id/iv_meditate"
@@ -351,7 +371,8 @@
                         app:layout_constraintBottom_toBottomOf="@id/tvDesc_meditate"
                         app:layout_constraintStart_toEndOf="@id/tvDesc_meditate"
                         app:layout_constraintTop_toTopOf="@id/tv_meditate"
-                        app:tint="@color/primary_900" />
+                        app:tint="@color/primary_900"
+                        android:contentDescription="@string/next_arrow" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
@@ -381,12 +402,13 @@
                         android:layout_height="70dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
                         android:layout_marginBottom="8dp"
+                        android:contentDescription="@string/menu_article"
                         android:src="@drawable/ic_article"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ImageContrastCheck" />
 
                     <TextView
                         android:id="@+id/tv_article"
@@ -409,7 +431,7 @@
                         android:layout_marginEnd="35dp"
                         android:fontFamily="@font/poppins_regular"
                         android:lineSpacingExtra="4dp"
-                        android:text="All about mental health awareness"
+                        android:text="@string/desc_article"
                         android:textColor="@color/primary_900"
                         android:textSize="13sp"
                         app:layout_constraintBottom_toBottomOf="@+id/iv_article"
@@ -425,7 +447,8 @@
                         app:layout_constraintBottom_toBottomOf="@id/tvDesc_article"
                         app:layout_constraintStart_toEndOf="@id/tvDesc_article"
                         app:layout_constraintTop_toTopOf="@id/tv_article"
-                        app:tint="@color/primary_900" />
+                        app:tint="@color/primary_900"
+                        android:contentDescription="@string/next_arrow" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>

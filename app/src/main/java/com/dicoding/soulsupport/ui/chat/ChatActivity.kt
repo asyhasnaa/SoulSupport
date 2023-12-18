@@ -1,6 +1,5 @@
 package com.dicoding.soulsupport.ui.chat
 
-import ChatViewModel
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -17,7 +16,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ChatActivity : AppCompatActivity() {
+class ChatActivity : AppCompatActivity() , ChatAdapter.OnItemClickListener{
 
     private val apiService = ApiClient.create()
     private lateinit var binding: ActivityChatBinding
@@ -30,7 +29,7 @@ class ChatActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val recyclerView: RecyclerView = findViewById(R.id.item_chat)
-        chatAdapter = ChatAdapter()
+        chatAdapter = ChatAdapter(this)
         recyclerView.adapter = chatAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
         chatViewModel = ViewModelProvider(this)[ChatViewModel::class.java]
@@ -54,6 +53,7 @@ class ChatActivity : AppCompatActivity() {
 
     }
 
+    @Suppress("DEPRECATION")
     private fun onBack() {
         binding.btnBack.setOnClickListener {
             onBackPressed()
@@ -64,12 +64,14 @@ class ChatActivity : AppCompatActivity() {
     private fun sendMessage(userMessage: String) {
 
         binding.edtMessage.text.clear()
+        chatAdapter.addTypingMessage()
 
         val request = ChatRequest(userMessage)
         val call = apiService.sendMessage(request)
 
         call.enqueue(object : Callback<ChatResponse> {
             override fun onResponse(call: Call<ChatResponse>, response: Response<ChatResponse>) {
+                chatAdapter.removeTypingMessage()
                 if (response.isSuccessful) {
                     val prediction = response.body()?.prediction ?: "No prediction available"
                     runOnUiThread {
@@ -96,7 +98,6 @@ class ChatActivity : AppCompatActivity() {
         })
     }
 
-
     private fun showBotResponse(response: String) {
         chatAdapter.addUserMessage(response)
         chatAdapter.addBotMessage(response)
@@ -105,5 +106,10 @@ class ChatActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
             chatViewModel.saveChatHistory()
+    }
+
+    override fun onItemClick(message: ChatMessage) {
+        chatViewModel.deleteMessage(message)
+        chatAdapter.setMessages(chatViewModel.chatHistory.value ?: emptyList())
     }
 }
