@@ -1,3 +1,162 @@
 <resources>
     <string name="app_name">SoulSupport</string>
+
+    <!--    Text untuk Onboarding-->
+    <string name="desc_splash">Logo SplashScreen</string>
+    <string name="title_onboarding1">Ruang\ntanpa batas</string>
+    <string name="desc_onboarding1">Tempat di mana setiap kisah diterima dengan hangat dan setiap perasaan dihargai tanpa syarat.</string>
+    <string name="title_onboarding2">Karena kamu\nberharga</string>
+    <string name="desc_onboarding2">Kami hadir untuk mendengarkan dan mendukung Anda. Setiap cerita adalah langkah kecil menuju keseimbangan mental yang berharga.</string>
+    <string name="title_onboarding3">Mulai melangkah\nbersama</string>
+    <string name="desc_onboarding3">Melangkah dan menjadi pilar bagi satu sama lain. Soul Support adalah tempat di mana kita saling menguatkan dan tumbuh bersama."</string>
+    <string name="btn_onboard">Masuk</string>
+    <string name="tv_name">Murphy</string>
+    <string name="pref_key_dark" translatable="false">key_dark_mode</string>
+    <string name="pref_dark_auto" translatable="false">auto</string>
+
+    <!--    Text pada halaman Menu-->
+    <string name="hello_name">Selamat Datang! </string>
+    <string name="tv_home_welcome">Great to see you again!</string>
+    <string name="title_menu">What do you want to do?</string>
+    <string name="menu_chatbot">Chat with Sarah</string>
+    <string name="menu_note">Notes</string>
+    <string name="menu_article">Article</string>
+    <string name="menu_meditation">Meditation</string>
+
+    <string name="title_login_regis">Soul Support</string>
+    <string name="title_welcome">Welcome to Soul support</string>
+    <string name="daftar">DAFTAR</string>
+    <string name="masuk">MASUK</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="dont_have_account">Don’t have account?</string>
+    <string name="have_account_login">Already have account?</string>
+    <string name="username">username</string>
+    <string name="nama_bot">Sarah</string>
+    <string name="back">kembali</string>
+    <string name="text_register">Create new account</string>
+    <string name="text_notes">Tell us about \n your day</string>
+    <string name="umur_register">age</string>
+    <string name="register_view">Let\'s Gooo…</string>
+    <string name="desc_checkbox">Berusia 15 tahun keatas</string>
+    <string name="arrow_back">tombol back</string>
+    <string name="image_user">image user</string>
+    <string name="arrow_logout">arrow logout</string>
+    <string name="setting">Setting</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="notification">Notification</string>
+    <string name="keluar">Keluar</string>
+    <string name="icon_logout">icon logout</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="icon_notifikasi">icon notifikasi</string>
+    <string name="icon_night_mode">icon night mode</string>
+    <string name="title_catatan">Catatan</string>
+    <string name="note_title">Judul</string>
+    <string name="hapus_catatan">hapus_catatan</string>
+    <string name="btn_edit">Edit</string>
+    <string name="searchbar_tint">Cari article</string>
+    <string name="message">Message....</string>
+    <string name="this_is_a_message">This is a message</string>
+    <string name="fab">tambah_note</string>
+    <string name="contoh_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Ut enim ad minim veniam, </string>
+    <string name="item_gambar_article">Gambar article</string>
+    <string name="tv_title_article">Finding Happiness</string>
+    <string name="keterangan_article"><![CDATA[Baca Selengkapnya >]]></string>
+    <string name="add_note_title">The title</string>
+    <string name="add_note_desc">Tell us about your day here</string>
+    <string name="btn_simpan">Save</string>
+    <string name="desc_login">Hello, \nNice to see you \again!</string>
+    <string name="date">Date</string>
+
+    <string name="banner_image">banner image</string>
+    <string name="img_user">image user</string>
+    <string name="exd_fab">Buat Cerita</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">gallery</string>
+    <string name="upload">Upload</string>
+
+    <string name="title">Judul</string>
+    <string name="description">Deskripsi</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Hapus</string>
+    <string name="message_undo">Batalkan menghapus item sebelumnya?</string>
+    <string name="message_ok">OK</string>
+    <string name="cancel">Batal</string>
+    <string name="empty">Field can not be blank</string>
+    <string name="update">Update</string>
+    <string name="change">Ubah</string>
+    <string name="add">Create</string>
+    <string name="save">Simpan</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="message_cancel">Apakah anda ingin membatalkan perubahan pada form?</string>
+    <string name="message_delete">Apakah anda yakin ingin menghapus item ini?</string>
+    <string name="added">Satu item berhasil ditambahkan</string>
+    <string name="changed">Satu item berhasil diubah</string>
+    <string name="deleted">Satu item berhasil dihapus</string>
+
+    <!--    Text untuk halaman meditasi-->
+    <string name="title_meditasi">Get your soul\nspace to relax</string>
+    <string name="desc_meditasi">choose your meditation focus</string>
+    <string name="tv_release_stress">Release Stress</string>
+    <string name="desc_release_page">Istirahat sejenak dapat memberi pikiranmu waktu untuk menenangkan diri</string>
+    <string name="release_stress">Now, close your eyes. Relax your shoulders. \nTake a deep breath in, hold for a moment, and exhale slowly. Release the tension with each breath. Let go of the stress weighing you down.</string>
+    <string name="tv_better_sleep">Better Sleep</string>
+    <string name="desc_betterSleep">As you prepare for sleep, find a comfortable position. Inhale deeply, allowing calmness to fill your body. Exhale, letting go of the thoughts that keep you awake. Imagine a peaceful place, and let that serenity guide you into a restful sleep.</string>
+    <string name="desc_better_page">Bayangkan tempat yang damai dan memandumu tidur nyenyak</string>
+    <string name="desc_emotional">Tarik napas, regangkan dengan lembut. Hembuskan napas dan rileks</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="detail_artikel">Detail Article</string>
+    <string name="add_note">Add Note</string>
+    <string name="profile">Profile</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="next_arrow">next arrow</string>
+    <string name="friendship_beyond">Friendship Beyond</string>
+    <string name="words">Words:</string>
+    <string name="your_mental_health_support">Your mental health support</string>
+    <string name="desc_article">All about mental health awareness</string>
+    <string name="desc_chat">Save place to share your thought</string>
+    <string name="desc_meditate">Get your soul space to relax</string>
+    <string name="desc_note">Tell us about your day</string>
+    <string name="home">Home</string>
+    <string name="chat">Chat</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!-- Setting -->
+    <string name="reminder_header">Reminder</string>
+    <string name="pref_key_notify">key_notification</string>
+    <string name="pref_notify_summary">Daily reminder for nearest schedule of the day.</string>
+    <string name="pref_notify_name">Notification</string>
+    <string name="display_header">Display</string>
+    <string name="pref_dark_title">Dark mode</string>
+    <string name="pref_dark_on" translatable="false">on</string>
+    <string name="pref_dark_off" translatable="false">off</string>
+    <string name="dark_mode_auto">Automatic</string>
+    <string name="dark_mode_on">Dark mode</string>
+    <string name="dark_mode_off">Light mode</string>
+    <string name="notification_message_format">(%1$s - %2$s) %3$s</string>
+
+    <string name="notification_text">Semoga hari mu baik,Jangan lupain aku yah teman curhat sarah</string>
+
 </resources>

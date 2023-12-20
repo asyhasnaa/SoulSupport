@@ -1,0 +1,9 @@
+<!-- res/drawable/banner_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="16dp" /> <!-- Adjust the radius as needed -->
+    <gradient
+        android:startColor="@color/primary_900"
+    android:endColor="@color/primary_700"
+    android:type="linear"
+    android:angle="45" />
+</shape>
