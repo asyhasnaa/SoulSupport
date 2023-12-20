@@ -30,7 +30,7 @@ class DailyReminder : BroadcastReceiver() {
         val intent = Intent(context, DailyReminder::class.java)
         val calendar = Calendar.getInstance()
         calendar.apply {
-            set(Calendar.HOUR_OF_DAY,12)
+            set(Calendar.HOUR_OF_DAY,10)
             set(Calendar.MINUTE, 0)
             set(Calendar.SECOND, 0)
         }
