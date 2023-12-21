@@ -105,7 +105,8 @@
                     android:text="@string/date"
                     android:textColor="@color/secondary_700"
                     android:textSize="12sp"
-                    app:layout_constraintTop_toBottomOf="@+id/note_detail_title" />
+                    app:layout_constraintTop_toBottomOf="@+id/note_detail_title"
+                    tools:ignore="TextContrastCheck" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

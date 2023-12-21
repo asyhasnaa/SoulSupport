@@ -50,7 +50,6 @@ class DetailNoteActivity : AppCompatActivity() {
             db.deleteNote(noteId)
             Toast.makeText(this, "Catatan berhasil dihapus", Toast.LENGTH_SHORT).show()
 
-            // Instead of replacing with NoteFragment, you might want to go back to NoteActivity
             finish()
         }
         alertDialogBuilder.setNegativeButton("Tidak", null)

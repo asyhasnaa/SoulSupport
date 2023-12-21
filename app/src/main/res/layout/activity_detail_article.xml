@@ -19,6 +19,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:title="Happy reading"
@@ -66,7 +67,8 @@
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/contoh_text"
                 android:textAlignment="textStart"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="VisualLintLongText" />
         </LinearLayout>
 
         <ProgressBar

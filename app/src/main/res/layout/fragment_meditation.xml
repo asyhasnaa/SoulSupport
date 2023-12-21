@@ -97,7 +97,8 @@
                 android:src="@drawable/img_stress"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/iv_meditation" />
 
             <TextView
                 android:id="@+id/tv_meditate"
@@ -138,7 +139,8 @@
                 app:layout_constraintBottom_toBottomOf="@id/tvDesc_meditate"
                 app:layout_constraintStart_toEndOf="@id/tvDesc_meditate"
                 app:layout_constraintTop_toTopOf="@id/tv_meditate"
-                app:tint="@color/primary_900" />
+                app:tint="@color/primary_900"
+                android:contentDescription="@string/iv_meditation" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -171,7 +173,8 @@
                 android:src="@drawable/img_night"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/iv_meditation" />
 
             <TextView
                 android:id="@+id/tv_meditate2"
@@ -211,7 +214,8 @@
                 app:layout_constraintBottom_toBottomOf="@id/tvDesc_meditate2"
                 app:layout_constraintStart_toEndOf="@id/tvDesc_meditate2"
                 app:layout_constraintTop_toTopOf="@id/tv_meditate2"
-                app:tint="@color/primary_900" />
+                app:tint="@color/primary_900"
+                android:contentDescription="@string/iv_meditation" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -243,7 +247,8 @@
                 android:src="@drawable/img_emotional"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/iv_meditation" />
 
             <TextView
                 android:id="@+id/tv_meditate3"
@@ -252,7 +257,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="18dp"
                 android:fontFamily="@font/poppins_semi_bold"
-                android:text="Emotional Balance"
+                android:text="@string/tv_emotional"
                 android:textColor="@color/primary_900"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toTopOf="@+id/tvDesc_meditate3"
@@ -283,7 +288,8 @@
                 app:layout_constraintBottom_toBottomOf="@id/tvDesc_meditate3"
                 app:layout_constraintStart_toEndOf="@id/tvDesc_meditate3"
                 app:layout_constraintTop_toTopOf="@id/tv_meditate3"
-                app:tint="@color/primary_900" />
+                app:tint="@color/primary_900"
+                android:contentDescription="@string/iv_meditation" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
