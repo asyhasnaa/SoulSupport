@@ -16,4 +16,3 @@ Capstone Project SoulSupport Application
 - Material 3
 - Okhttp3
 - Glide
-  [SoulSupport](C:\Users\dedim\OneDrive\Documents\A UPI KULIAH\KAMPUS MERDEKA\iPhone 13 Pro)
