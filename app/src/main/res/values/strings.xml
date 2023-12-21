@@ -15,7 +15,7 @@
     <string name="pref_dark_auto" translatable="false">auto</string>
 
     <!--    Text pada halaman Menu-->
-    <string name="hello_name">Selamat Datang! </string>
+    <string name="hello_name">Hai,  </string>
     <string name="tv_home_welcome">Great to see you again!</string>
     <string name="title_menu">What do you want to do?</string>
     <string name="menu_chatbot">Chat with Sarah</string>
@@ -158,5 +158,7 @@
     <string name="notification_message_format">(%1$s - %2$s) %3$s</string>
 
     <string name="notification_text">Semoga hari mu baik,Jangan lupain aku yah teman curhat sarah</string>
+    <string name="detail_note">Detail Note</string>
+    <string name="image_article">image article</string>
 
 </resources>

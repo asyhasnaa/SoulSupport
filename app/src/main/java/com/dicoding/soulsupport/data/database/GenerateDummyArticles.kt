@@ -12,7 +12,6 @@ object GenerateDummyArticles {
                 R.drawable.kesehatan_mental,
                 "Kesehatan Mental",
                "Pengertian Kesehatan Mental\n" +
-                       " \n" +
                        "Kesehatan jiwa atau sebutan lainnya kesehatan mental adalah kesehatan yang berkaitan dengan kondisi emosi, kejiwaan, dan psikis seseorang.\n" +
                        "Perlu kamu ketahui bahwa peristiwa dalam hidup yang berdampak besar pada kepribadian dan perilaku seseorang bisa berpengaruh pada kesehatan mentalnya.\n" +
                        "Misalnya, pelecehan saat usia dini, stres berat dalam jangka waktu lama tanpa adanya penanganan, dan mengalami kekerasan dalam rumah tangga.\n" +
