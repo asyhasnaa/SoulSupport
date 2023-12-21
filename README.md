@@ -8,4 +8,3 @@ Capstone Project SoulSupport Application
 - Article about mental health
 - Reminder Notification
 
-**Library**
