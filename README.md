@@ -14,7 +14,7 @@
 | ----------------------------------------------------------------------------- | ------------------------------ | -------------------------------------------------      |
 |[LiveData](https://developer.android.com/topic/libraries/architecture/livedata)|to unify data changes     |implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")  |   
 |[Lifecycle](https://developer.android.com/jetpack/androidx/releases/lifecycle).|Connecting frontend and backend |implementation("androidx.lifecycle:lifecycle-viewmodel | 
-|                                                                                                                      |   ktx:2.6.2")                                         |
+|                                                                               |                                |   ktx:2.6.2")                                |
 |[Refrofit](https://square.github.io/retrofit/)     | Request API and convert json response into an object       |implementation("com.squareup.retrofit2:converter-gson:2.9.0")|
 |[OkHttp](https://square.github.io/okhttp/)         | Make a data request to the server |implementation("com.squareup.okhttp3:logging-interceptor:4.11.0") |
 |[AndroidKTX](https://developer.android.com/kotlin/ktx) |Kotlin extensions are part of Android Jetpack   |implementation 'androidx.core:core-ktx:1.6.0'  |
