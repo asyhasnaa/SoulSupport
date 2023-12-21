@@ -1,16 +1,12 @@
 package com.dicoding.soulsupport.ui.article
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.data.database.GenerateDummyArticles
 import com.dicoding.soulsupport.databinding.ActivityArticleBinding
 import com.dicoding.soulsupport.ui.adapter.ArticleAdapter
-import com.dicoding.soulsupport.ui.article.detail.DetailArticleActivity
 
 class ArticleActivity : AppCompatActivity() {
 

@@ -23,6 +23,14 @@ class ChatFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupClickListeners()
+        onBack()
+    }
+
+    @Suppress("DEPRECATION")
+    private fun onBack() {
+        binding.btnBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
     }
 
     private fun setupClickListeners() {

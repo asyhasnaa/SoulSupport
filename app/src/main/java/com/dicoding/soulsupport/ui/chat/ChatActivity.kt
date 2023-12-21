@@ -53,7 +53,6 @@ class ChatActivity : AppCompatActivity(), ChatAdapter.OnItemClickListener {
 
     }
 
-    @Suppress("DEPRECATION")
     private fun onBack() {
         binding.btnBack.setOnClickListener {
             onBackPressed()

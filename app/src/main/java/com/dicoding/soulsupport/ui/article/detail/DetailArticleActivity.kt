@@ -6,6 +6,7 @@ import android.widget.Toast
 import com.dicoding.soulsupport.R
 import com.dicoding.soulsupport.data.database.GenerateDummyArticles
 import com.dicoding.soulsupport.databinding.ActivityDetailArticleBinding
+import com.google.android.material.appbar.MaterialToolbar
 
 class DetailArticleActivity : AppCompatActivity() {
 
@@ -25,5 +26,15 @@ class DetailArticleActivity : AppCompatActivity() {
         } else {
             Toast.makeText(this, "Article Gagal memuat", Toast.LENGTH_SHORT).show()
         }
+
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+
+        setSupportActionBar(toolbar)
+
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
     }
+
+
 }

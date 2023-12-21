@@ -4,8 +4,6 @@ package com.dicoding.soulsupport.ui
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.dicoding.soulsupport.data.pref.AuthPreferences
-import com.dicoding.soulsupport.data.pref.dataStore
 import com.dicoding.soulsupport.data.repository.AuthRepository
 import com.dicoding.soulsupport.di.Injection
 import com.dicoding.soulsupport.ui.auth.login.LoginViewModel

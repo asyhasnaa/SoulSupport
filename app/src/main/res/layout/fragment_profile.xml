@@ -173,16 +173,6 @@
                         android:text="@string/notification"
                         android:textColor="@color/secondary_900" />
 
-                    <ImageView
-                        android:id="@+id/notification"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentBottom="true"
-                        android:src="@drawable/ic_right_arrow" />
-
-
                 </RelativeLayout>
 
             </LinearLayout>
