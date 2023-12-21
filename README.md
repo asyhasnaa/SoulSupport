@@ -1,5 +1,4 @@
 # SoulSupport Application
-![apk](https://drive.google.com/drive/folders/18PEx9kARTt5NsfcUX_HdzYlXKKkQ8MPh)
 
 ## About The Application
 SoulSupport is an innovative digital solution addressing the global mental health crisis and the accessibility gap in support services. Motivated by a recent university student suicide and the subsequent negative impact on social media, the project seeks to leverage digital technology to create non-judgmental, empathetic virtual companions for individuals in need. Focused on providing immediate and stigma-free support, SoulSupport aims to serve as a mental health care platform, offering 24/7 companionship, resources, and a listening ear. By addressing the rising levels of stress, anxiety, and depression, the project aspires to make a profound impact on individuals' lives, fostering improved mental well-being and cultivating a more empathetic and connected world.
