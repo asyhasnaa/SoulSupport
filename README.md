@@ -8,7 +8,7 @@ Capstone Project SoulSupport Application
 - Article about mental health
 - Reminder Notification
 
-##Libary
+## Libary
 - Lifecycle & LiveData
 - Refrofit 2
 - DataStore
