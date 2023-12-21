@@ -160,5 +160,13 @@
     <string name="notification_text">Semoga hari mu baik,Jangan lupain aku yah teman curhat sarah</string>
     <string name="detail_note">Detail Note</string>
     <string name="image_article">image article</string>
+    <string name="send_button">send button</string>
+    <string name="edit_note">Edit Note</string>
+    <string name="start_chat">Start Chat</string>
+    <string name="teman_berceritamu">teman berceritamu</string>
+    <string name="tv_sarah">Hi! Aku Sarah</string>
+    <string name="ruang_nbercerita">Ruang \nbercerita</string>
+    <string name="iv_meditation">image meditation</string>
+    <string name="tv_emotional">Emotional Balance</string>
 
 </resources>

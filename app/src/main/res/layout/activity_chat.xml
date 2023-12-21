@@ -50,7 +50,8 @@
                         android:id="@+id/img_profile"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/bot_sarah"/>
+                        android:src="@drawable/bot_sarah"
+                        android:contentDescription="@string/nama_bot" />
                 </androidx.cardview.widget.CardView>
 
                 <TextView
@@ -93,7 +94,8 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item_chat" />
+        app:layout_constraintTop_toBottomOf="@+id/item_chat"
+        tools:ignore="TextContrastCheck" />
 
 
     <ImageButton
@@ -106,7 +108,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/edt_message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/edt_message"
-        app:layout_constraintTop_toTopOf="@+id/edt_message" />
+        app:layout_constraintTop_toTopOf="@+id/edt_message"
+        android:contentDescription="@string/send_button" />
 
     <ProgressBar
         android:id="@+id/progressBar"

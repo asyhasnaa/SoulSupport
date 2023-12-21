@@ -1,15 +1,13 @@
 package com.dicoding.soulsupport.ui.auth.register
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.soulsupport.data.Result
-import com.dicoding.soulsupport.data.remote.refrofit.ApiService
-import com.dicoding.soulsupport.data.repository.AuthRepository
 import com.dicoding.soulsupport.databinding.ActivityRegisterBinding
 import com.dicoding.soulsupport.ui.ViewModelFactory
 import com.dicoding.soulsupport.ui.auth.login.LoginActivity
@@ -60,6 +58,7 @@ class RegisterActivity : AppCompatActivity() {
                                         show()
                                     }
                                 }
+
                                 is Result.Error -> {
                                     binding.progressBar.visibility = View.GONE
                                     Toast.makeText(this, "Akun sudah terdaftar", Toast.LENGTH_SHORT)
@@ -70,7 +69,7 @@ class RegisterActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(this, "Password tidak sama", Toast.LENGTH_SHORT).show()
                 }
-            }else {
+            } else {
                 Toast.makeText(this, "Semua field harus diisi", Toast.LENGTH_SHORT).show()
             }
         }

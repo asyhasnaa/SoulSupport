@@ -50,7 +50,8 @@
                 app:layout_constraintTop_toTopOf="@+id/tv_title"
                 card_view:layout_constraintEnd_toStartOf="@+id/iv_delete"
                 card_view:layout_constraintTop_toTopOf="@+id/iv_delete"
-                card_view:tint="@color/secondary_700" />
+                card_view:tint="@color/secondary_700"
+                android:contentDescription="@string/edit_note" />
 
             <ImageView
                 android:id="@+id/iv_delete"
@@ -63,7 +64,8 @@
                 card_view:layout_constraintBottom_toBottomOf="parent"
                 card_view:layout_constraintEnd_toEndOf="parent"
                 card_view:layout_constraintTop_toTopOf="parent"
-                card_view:tint="@color/secondary_700" />
+                card_view:tint="@color/secondary_700"
+                android:contentDescription="@string/delete" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView

@@ -67,7 +67,8 @@
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/contoh_text"
                 android:textAlignment="textStart"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="VisualLintLongText" />
         </LinearLayout>
 
         <ProgressBar

@@ -7,11 +7,8 @@ import com.dicoding.soulsupport.data.Result
 import com.dicoding.soulsupport.data.model.AuthModel
 import com.dicoding.soulsupport.data.pref.AuthPreferences
 import com.dicoding.soulsupport.data.remote.refrofit.ApiService
-import com.dicoding.soulsupport.data.remote.response.Data
-import com.dicoding.soulsupport.data.remote.response.DetailUserResponse
 import com.dicoding.soulsupport.data.remote.response.ErrorResponse
 import com.dicoding.soulsupport.data.remote.response.LoginResponse
-import com.dicoding.soulsupport.data.remote.response.LogoutResponse
 import com.dicoding.soulsupport.data.remote.response.RegisterResponse
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow
@@ -21,7 +18,12 @@ class AuthRepository(
     private val apiService: ApiService,
     private val authPreferences: AuthPreferences
 ) {
-    fun register(name: String, email: String, password: String, confirmPassword: String): LiveData<Result<RegisterResponse>> = liveData {
+    fun register(
+        name: String,
+        email: String,
+        password: String,
+        confirmPassword: String
+    ): LiveData<Result<RegisterResponse>> = liveData {
         emit(Result.Loading)
         try {
             val response = apiService.register(name, email, password, confirmPassword)

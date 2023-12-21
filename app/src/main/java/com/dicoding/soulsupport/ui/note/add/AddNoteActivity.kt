@@ -8,7 +8,6 @@ import com.dicoding.soulsupport.data.database.NoteDatabaseHelper
 import com.dicoding.soulsupport.databinding.ActivityAddNoteBinding
 import com.dicoding.soulsupport.utils.DateFormatter
 
-
 class AddNoteActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddNoteBinding

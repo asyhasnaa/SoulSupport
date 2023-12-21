@@ -37,7 +37,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/poppins_medium"
                 android:gravity="center"
-                android:text="Chatbot"
+                android:text="@string/chat"
                 android:textColor="@color/secondary_900"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="Ruang \nbercerita"
+        android:text="@string/ruang_nbercerita"
         android:textColor="@color/primary_900"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +81,8 @@
         android:src="@drawable/bot_sarah"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDesc" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDesc"
+        android:contentDescription="@string/nama_bot" />
 
     <TextView
         android:id="@+id/tv_sarah"
@@ -89,7 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_semi_bold"
-        android:text="Hi! Aku Sarah"
+        android:text="@string/tv_sarah"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,7 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
-        android:text="teman berceritamu"
+        android:text="@string/teman_berceritamu"
         android:textColor="@color/grey"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Start Chat"
+        android:text="@string/start_chat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/desc_sarah" />

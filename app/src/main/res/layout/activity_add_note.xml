@@ -74,7 +74,8 @@
                 android:id="@+id/add_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:lines="2" />
+                android:lines="2"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -94,7 +95,8 @@
                 android:layout_height="match_parent"
                 android:gravity="top"
                 android:lines="15"
-                android:maxLines="19" />
+                android:maxLines="19"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
