@@ -8,11 +8,3 @@ Capstone Project SoulSupport Application
 - Article about mental health
 - Reminder Notification
 
-## Libary
-- Lifecycle & LiveData
-- Refrofit 2
-- DataStore
-- Corutines
-- Material 3
-- Okhttp3
-- Glide

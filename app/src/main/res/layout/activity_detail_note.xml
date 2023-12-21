@@ -38,7 +38,7 @@
                 android:fontFamily="@font/poppins_medium"
                 android:textColor="@color/secondary_900"
                 android:gravity="center"
-                android:text="@string/detail_artikel"
+                android:text="@string/detail_note"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

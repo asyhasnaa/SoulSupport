@@ -1,7 +1,6 @@
 package com.dicoding.soulsupport.ui.chat
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,7 +16,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ChatActivity : AppCompatActivity() , ChatAdapter.OnItemClickListener{
+class ChatActivity : AppCompatActivity(), ChatAdapter.OnItemClickListener {
 
     private val apiService = ApiClient.create()
     private lateinit var binding: ActivityChatBinding
@@ -58,7 +57,6 @@ class ChatActivity : AppCompatActivity() , ChatAdapter.OnItemClickListener{
     private fun onBack() {
         binding.btnBack.setOnClickListener {
             onBackPressed()
-
         }
     }
 
@@ -106,7 +104,7 @@ class ChatActivity : AppCompatActivity() , ChatAdapter.OnItemClickListener{
 
     override fun onDestroy() {
         super.onDestroy()
-            chatViewModel.saveChatHistory()
+        chatViewModel.saveChatHistory()
     }
 
     override fun onItemClick(message: ChatMessage) {
